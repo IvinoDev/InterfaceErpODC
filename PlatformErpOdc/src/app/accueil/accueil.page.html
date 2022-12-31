@@ -1,0 +1,369 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<!-- <div *ngIf="totalactivite==0" class="container-fluid mere" style="height: 100%;">
+  <ion-label class="lblAucune">  Aucune activite
+  </ion-label>
+</div> -->
+
+
+  <div class="container-fluid mere" style="height: 100%;">
+
+
+
+    <div class="row gy-3 my-3">
+
+      <div class="col- col-sm-10 col-md-10 col-lg-3 col-xl-3 col-xxl-3 side_gauche">
+
+        <div class="col side">
+
+
+
+          <div class="col">
+
+            <div class="titre_inf">
+              Statistiques
+            </div>
+
+
+
+             <div class="col" style="margin-top: 5%;">
+
+
+              <div class="col">
+
+                <div class="row" >
+
+                  <div class="col"><i class="bi bi-activity icon1"></i></div>
+                  <div class="col nombre" >{{totalactivite}}</div>
+
+                </div>
+
+                <div class="col text_info">
+                  Activités Totales
+                </div>
+
+              </div>
+
+
+
+              <div class="col">
+
+                <div class="row" >
+
+                  <div class="col"><i class="bi bi-people-fill icon2"></i></div>
+                  <div class="col nombre" >{{personneActive}}</div>
+
+                </div>
+
+                <div class="col text_info">
+                  Personnels actifs
+                </div>
+
+              </div>
+
+
+
+
+
+
+              <div class="col">
+
+                <div class="row" >
+
+                  <div class="col"> <i class="fa fa-users icon3" aria-hidden="true"></i></div>
+                  <div class="col nombre" >{{participantsTotal}}</div>
+
+                </div>
+
+                <div class="col text_info">
+                  Participants Totals
+                </div>
+
+              </div>
+
+
+
+
+
+              <div class="col">
+
+                <div class="row" >
+
+                  <div class="col"><i class="fa fa-female icon4" aria-hidden="true"></i></div>
+                  <div class="col nombre" >{{participantFeminins}}</div>
+
+                </div>
+
+                <div class="col text_info">
+                  Participants feminins
+                </div>
+
+              </div>
+
+
+
+
+
+              <div class="col">
+
+                <div class="row" >
+
+                  <div class="col"><i class="fa fa-child icon5" aria-hidden="true"></i></div>
+                  <div class="col nombre" >{{participantEnfants}}</div>
+
+                </div>
+
+                <div class="col text_info">
+                  Participants enfants
+                </div>
+
+              </div>
+
+
+             </div>
+
+          </div>
+
+
+
+
+        <div class="col reporting">
+          <button type="button" class="btn buttonColor report" [routerLink]="['/dashboard/reporting']" routerLinkActive="router-link-active" >Reporting</button>
+        </div>
+
+
+
+        </div>
+      </div>
+
+      <div class="col- col-sm-10 col-md-10 col-lg-8 col-xl-8 col-xxl-8 side_droite">
+
+
+
+        <div class="col activite">
+
+
+          <span class="AenCours">Activités en cours</span>
+
+          <div *ngIf="enCourLong==0" >
+            <div class="aucune">Aucune activité en cours</div>
+          </div>
+
+          <div *ngIf="enCourLong!=0"  id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            
+            <div class="carousel-inner">
+
+              <div class="carousel-item active" data-bs-interval="2000" *ngFor="let activiteEncour of activiteEncours | slice:0:3 let i=index">
+                <img *ngIf="i<3" src={{activiteEncour.image}}  class="d-block w-100" alt="...">
+                
+
+
+                <div *ngIf="i<3" class="carousel-caption d-none d-md-block" [routerLink]="['/dashboard/detailactivite',activiteEncour.id]">
+                    <h5 class="nom_activite">{{activiteEncour.nom}}</h5>
+                    <span class="encours_ticket">{{activiteEncour.dateDebut | date }}</span> 
+                    <span  *ngIf="activiteEncour.salle!=null" class="encours_ticket"> -- {{activiteEncour.salle.libelle}}</span><br>
+                    <img src="../../assets/A (2).jpg" class="img_activite_avenir" alt="" srcset="">{{activiteEncour.createur.nom}} {{activiteEncour.createur.prenom}}
+                </div>
+
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+        <div class="col activite" style="margin-top: 3%; padding-right: 11px;  background-color:white; border-radius: 15px;">
+  
+        
+          <div class="row" style="margin-bottom: 3%">
+            <div class="col">
+
+              <ul id="MiniLeftNav" [routerLink]="['/dashboard/allactivity/creer-activites']">
+                <li >
+                    <a class="navtext"  id="open-modal"><i class="bi bi-plus-square" style="color:#FF7900; font-size: 15px; margin-left: 25%;"></i> <span>Activité</span></a>
+                </li>
+              </ul>
+
+            </div>
+            <div class="col" style="margin-top: 2%;">
+              <p class="AVenir"> Activités à venir</p>
+            </div>
+          </div>
+
+
+
+
+
+          <div class="row"></div>
+          
+        
+
+          
+
+          <div class="row align-items-center venir"  >
+
+         
+
+            <div  *ngIf="aVenirLong==0" >
+              <div class="">Aucune activité à venir</div>
+            </div>
+ 
+          
+            <div class="col- col-sm- col-lg-4" *ngFor= "let activiteAveni of activiteAvenir | slice:0:3">
+              
+              <div class="content" >
+                <img src={{activiteAveni.image}} class="image" alt="">
+
+                <a href="">
+
+
+
+
+                  <div class="ticketAvenir" [routerLink]="['/dashboard/detailactivite',activiteAveni.id]">
+                    <span class="nomActivite">
+                      {{activiteAveni.nom}}
+                    </span>
+     
+                   <br>
+                   <span class="Date">
+                    {{activiteAveni.dateDebut  | date}}
+                   </span>
+     
+                     <br>
+               <img src="../../assets/avatar.png" style="border-radius: 50%; width:30px" alt="" srcset=""> <span
+                 class="nomLead" style="font-size:10px ;"> {{activiteAveni.createur.nom}}   {{activiteAveni.createur.prenom}}</span>
+ 
+                  </div>
+
+ 
+
+
+
+
+                 </a>
+              </div>
+           </div>
+            
+            <!-- <div class="col- col-sm- col-lg-4" ><img src="../../assets/images/odcTalk.jpg" class="image" alt=""></div> -->
+            <!-- <div class="col- col-sm- col-lg-4" >
+              
+              <div class="content">
+                <img src="../../assets/images/odcTalk.jpg" class="image" alt="">
+
+                <a href="">
+
+
+
+
+                  <div class="ticketAvenir">
+                    <span class="nomActivite">
+                     Nom Activité
+                    </span>
+     
+                   <br>
+                   <span class="Date">
+                     Status
+                   </span>
+     
+                     <br>
+               <img src="../../assets/avatar.png" style="border-radius: 50%; width:30px" alt="" srcset=""> <span
+                 class="nomLead" style="font-size:10px ;">  BALLO Ibrahima</span>
+ 
+                  </div>
+
+ 
+
+
+
+
+                 </a>
+              </div>
+           </div> -->
+            <!-- <div class="col- col-sm- col-lg-4" ><img src="../../assets/images/odcTalk.jpg" class="image" alt=""></div> -->
+
+            <!-- <div class="col- col-sm- col-lg-4" >
+              
+              <div class="content">
+                <img src="../../assets/images/odcTalk.jpg" class="image" alt="">
+
+                 <a href="">
+
+
+
+
+                  <div class="ticketAvenir">
+                    <span class="nomActivite">
+                     Nom Activité
+                    </span>
+     
+                   <br>
+                   <span class="Date">
+                     Status
+                   </span>
+     
+                     <br>
+               <img src="../../assets/avatar.png" style="border-radius: 50%; width:30px" alt="" srcset=""> <span
+                 class="nomLead" style="font-size:10px ;">  BALLO Ibrahima</span>
+ 
+                  </div>
+
+ 
+
+
+
+
+                 </a>
+              </div>
+           </div> -->
+
+
+
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

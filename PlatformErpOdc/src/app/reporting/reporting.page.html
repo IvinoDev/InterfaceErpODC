@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Reporting</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <button class="part" routerLink="/dashboard/reporting-participant">Participant</button>
+
+
+  <div class="header">
+    <div class="cd">
+      <div class="headerContent">
+        <p>Liste des activités</p>
+        <button class="filtre" id="open-modal">Filtre par</button>
+      </div>
+    </div>
+  </div>
+  <!-- routerLink="/dashboard/reportingfiltreact" -->
+
+
+
+
+  <div class="mx-3">
+
+
+    <table class="table table-striped text-center" id="season-tble">
+      <thead>
+        <tr>
+          <th scope="col">Activité</th>
+          <th scope="col">Type</th>
+          <th scope="col" class="hideColonne hideColonneOder">Statut</th>
+          <th scope="col">Date début</th>
+          <th scope="col" class="hideColonne hideColonneOder">Date fin</th>
+          <!-- <th scope="col" class="hideColonne">Entité</th> -->
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activite of activites | paginate : { itemsPerPage:10, currentPage:a}">
+          <td>{{activite.nom}}</td>
+          <td>{{activite.typeActivite.libelle}}</td>
+          <td class="hideColonne hideColonneOder">Encours</td>
+          <td>{{activite.dateDebut | date: 'dd MMMM yyyy à hh:mm'}}</td>
+          <td class="hideColonne hideColonneOder">{{activite.dateFin | date: 'dd MMMM yyyy à hh:mm'}}</td>
+          <!-- <td class="hideColonne hideColonneOder">{{activite.leader.monEntite}}</td> -->
+        </tr>
+      </tbody>
+
+    </table>
+  </div>
+
+  <div class="header">
+
+    <div class="headerContent">
+      <button class="filtre2" (click)="exportToExcel()"><i class="fa fa-download" aria-hidden="true"></i> Télécharger
+      </button>
+
+      
+    </div>
+  </div>
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="a = $event" nextLabel="Suivants" previousLabel="Précédents">
+    </pagination-controls>
+  </div>
+  
+</ion-content>
+
+<div class="container">
+
+  <ion-modal trigger="open-modal">
+    <ng-template>
+      <form action="#">
+        <div class="box">
+
+          <div class="soul">
+            <div class="col- col-sm- col-md-12 col-lg-12 col-xl-4 col-xxl-4 tout">
+              <div class="jean">
+                <div class="text">
+                  <p>Filtre activité</p>
+                </div>
+                <!-- Champ nom activité -->
+                <div class="input mb-3 form1">
+                  <label for="exampleInputNom" class="form-label">Nom de l'activité *</label>
+                  <input placeholder="Hacking" type="text" class="form-control" id="InputCmdp" required
+                    [(ngModel)]="nomactivite" [ngModelOptions]="{standalone: true}">
+
+                </div>
+
+                <!-- Champ type activité -->
+                <div>
+                  <label for="inputs" class="form-label">Type d'activité *</label>
+                  <select class="form-select" aria-label="Default select example" required [(ngModel)]="typeactivite"
+                    [ngModelOptions]="{standalone: true}">
+                    <option value="1">Selectionner activité</option>
+                    <option *ngFor="let ta of listetp">{{ta.libelle}}</option>
+                  </select>
+
+                </div>
+
+                <!-- Champ entité -->
+                <div>
+                  <label for="inputs" class="form-label">Entité</label>
+                  <select class="form-select" aria-label="Default select example" required [(ngModel)]="entiteselect"
+                    [ngModelOptions]="{standalone: true}">
+                    <option selected>Selectionner entité</option>
+                    <option value="1" *ngFor="let entite of entites">{{entite.libelleentite}}</option>
+                  </select>
+
+                </div>
+
+                <!-- Champ date début -->
+                <div class="input mb-3 form1">
+                  <label for="exampleInputNom" class="form-label">Date debut</label>
+                  <input placeholder="06/03/2022" type="date" class="form-control" id="InputCmdp"
+                    [(ngModel)]="datedebut" [ngModelOptions]="{standalone: true}">
+
+                </div>
+
+                <!-- Champ date fin -->
+                <div class="input mb-3 form1">
+                  <label for="exampleInputNom" class="form-label">Date fin</label>
+                  <input placeholder="06/10/2022" type="date" class="form-control" id="InputCmdp" [(ngModel)]="datefin"
+                    [ngModelOptions]="{standalone: true}">
+
+                </div>
+                <div class="row  ">
+
+                  <div class="col-lg-12 col-12 ">
+
+                    <button type="button" class="btn bouton" (click)="filtrerActivite()">Enregistrer</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+
+
+
+
+
+
+
+
+    </ng-template>
+  </ion-modal>
+</div>

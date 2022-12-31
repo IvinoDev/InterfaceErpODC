@@ -1,0 +1,273 @@
+// #exampleInputPrenom,#exampleInputNom ,#exampleInputResponEntite,#exampleInputNomEntite{
+//     // width: 74%;
+//     border-radius: 2rem;
+//     border: 1px solid black;
+// }
+
+
+@font-face {
+    font-family: poppinsBlack;
+    src: url("../../assets/font/Poppins-Black.ttf");
+}
+
+@font-face {
+    font-family: poppinsLight;
+    src: url("../../assets/font/Poppins-Light.ttf");
+}
+
+ion-content {
+    font-family: myfon;
+}
+
+.first_row {
+
+    background: #FFFFFF;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-bottom: 3%;
+    margin-right: 7%;
+
+}
+
+.second_row {
+    background: #FFFFFF;
+    box-shadow: 0px 6px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-bottom: 5%;
+    margin-right: 7%;
+}
+
+p {
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.col_right {
+    margin-left: 5%;
+    // margin-top: 15%;
+}
+
+label.form-label {
+    font-size: 14PX;
+    color: #FF7900;
+}
+
+.bi-toggle-on::before,
+.bi-toggle-off::before {
+    font-size: 35px;
+}
+
+.bi-toggle-on::before {
+    color: rgb(23, 150, 18);
+
+}
+
+.bi-toggle-off::before {
+    color: red;
+    margin-right: 12px;
+}
+
+.bi-toggle-off:hover,
+.bi-toggle-on:hover {
+    cursor: pointer;
+
+}
+
+label {
+    font-family: poppinsLight;
+    letter-spacing: 0.01em;
+}
+
+.gvNotifications {
+    font-family: poppinsBlack;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.icon_mail {
+
+    font-size: 14px;
+    margin-right: 50%;
+
+
+}
+
+.iconLabel {
+    margin-top: 10px;
+}
+
+.notification {
+    margin-bottom: 10px;
+    font-family: poppinsLight;
+    font-weight: bold;
+}
+
+.informerUser {
+    font-family: poppinsLight;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+
+
+#user {
+
+    // border-radius: 50%;
+    clip-path: ellipse(50% 50%);
+    width: 100px;
+    height: 100px;
+    margin-left: 10%;
+    margin-bottom: 10%;
+}
+
+.container {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+input[type=text] {
+    font-family: poppinsLight;
+
+}
+
+input#exampleInputNom {
+    border-radius: 15px;
+    border: 1px solid black;
+    width: 80%;
+    height: 35px;
+    background: #F8FAFC;
+    box-shadow: none;
+}
+
+.bouton {
+    background-color: #FF7900;
+    width: 135px;
+    border: 1px solid;
+    font-weight: bold;
+    margin-bottom: 10%;
+    border-radius: 15px;
+    letter-spacing: 0.03em;
+    color: #ffff;
+
+}
+
+@media screen and (max-width:600px) {
+    .bouton {
+        background-color: #FF7900;
+        width: auto;
+        border: none;
+        font-weight: bold;
+        margin-bottom: 10%;
+        border-radius: 15px;
+
+    }
+
+    input#exampleInputNom {
+        border-radius: 15px;
+        border: 1px solid black;
+        width: 100%;
+        height: 35px;
+        background: #F8FAFC;
+        box-shadow: none;
+    }
+
+    #user {
+
+        // border-radius: 50%;
+        clip-path: ellipse(50% 50%);
+        width: 100px;
+        height: 100px;
+        margin-left: 30%;
+        margin-bottom: 10%;
+
+    }
+
+    // .col_right {
+    //     margin-left: 15%;
+    //     // margin-top: 15%;
+    // }
+}
+
+.bouton:hover {
+
+    background-color: #ffffff;
+    border: #FF7900 1px solid !important;
+    color: #FF7900 !important;
+
+}
+
+.bbtn {
+    margin-right: 7% !important;
+}
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 26px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #118023;
+}
+
+//   input:focus + .slider {
+//     box-shadow: 0 0 1px #2196F3;
+//   }
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}

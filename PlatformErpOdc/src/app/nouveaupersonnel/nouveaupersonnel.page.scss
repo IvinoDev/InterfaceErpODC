@@ -1,0 +1,280 @@
+@font-face {
+    font-family: myfon;
+    src: url('../../assets/font/Poppins-Light.ttf');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: myfon;
+}
+
+#back{
+    cursor: pointer;
+}
+.firsttitle{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.mail{
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    background-color: #f8fafc;
+}
+ion-title{
+    color: #FF7900;
+}
+
+ion-content {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 6px;
+    position: absolute;
+    top: 9%;
+    background-color: #FFF;
+    color: #FF7900;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.container {
+    max-width: 900px;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 15px;
+    background: #fff;
+    // border: #000 3px solid;
+    margin: 20px auto;
+}
+.box {
+    width: 100%;
+    padding: 50px 30px;
+    border-radius: 15px;
+    border: #000 3px solid;
+    margin: 20px auto;
+}
+.mail{
+    position: relative;
+}
+#inp{
+    border-radius: 15px 0px 0px 15px;
+}
+.mailmodel{
+    color: #000;
+    background-color: #E9ECEF;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    transition: all 0, 3s ease;
+    padding-left: 1px;
+    color: #000;
+    width: 100%;
+    padding: 3.25%;
+    align-items: center;
+}
+
+input {
+    color: #000;
+    background-color: #f8fafc;
+}
+
+.container form .ajout {
+    color: #FF7900;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .ajout .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.select {
+    color: #000;
+    width: 100%;
+    padding: 3.25%;
+    margin-top: 1px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.ajout .input-box .details {
+    display: block;
+    font-weight: 500;
+}
+
+#details {
+    border-radius: 15px;
+}
+
+.ajout .input-box input {
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+    transition: all 0, 3s ease;
+}
+
+.ajout .input-box input:focus,
+.ajout .input-box input:valid {
+    border-color: #ccc;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.but {
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #FF7900;
+    color: #FFF;
+    border: #FF7900 1px solid;
+    margin-right: 30px;
+}
+
+.but:hover {
+    background: #FFF;
+    color: #FF7900;
+}
+
+form .button .input {
+    height: 100%;
+    width: 45%;
+    color: #FFFF;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    letter-spacing: 1px;
+   
+}
+
+form .button input:hover {
+    background: linear-gradient(135deg);
+}
+
+textarea {
+    color: #000;
+}
+
+@media (max-width: 1010px) {
+    .mailmodel span{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 584px) {
+    h1{
+        top: 11%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    form .ajout .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .ajout {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    h1 {
+        width: max-content;
+        font-size: 18px;
+    }
+    .ajout::-webkit-scrollbar {
+        width: 0;
+    }
+}
+@media (max-width: 390px) {
+    .mailmodel span{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 20px;
+        padding-right: 2rem;
+    }
+}
+@media (max-width: 316px) {
+    .select{
+        font-size: 15px;
+    }
+    .firsttitle{
+        margin-left: none;
+        font-size: 1rem;
+    }
+    #back{
+        top: 22px;
+        position: absolute;
+        font-size: 10px;
+    }
+    ion-title{
+        margin-left: 1em;
+    }
+    .col i{
+        margin-right: 1em;
+        margin-bottom: 1em;
+        font-size: 20px;
+    }
+   .buttom{
+    height: 25px;
+    margin: 30px 0;
+   }
+   .but{
+    font-size: 13px;
+   }
+    .details{
+        font-size: 14px;
+    }
+    .mailmodel span{
+        font-size: 10px;
+    }
+    h1{
+        font-size: 16px;
+        padding-right: 2rem;
+        top: 8%;
+    }
+    .box{
+        padding: 6px;
+        border: #000 1px solid;
+    }
+    .container{
+        padding: 4%;
+    }
+    .ajout .input-box input {
+        font-size: 12px;
+    }
+}

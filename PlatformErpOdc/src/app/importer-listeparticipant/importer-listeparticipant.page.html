@@ -1,0 +1,179 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Importer liste participant</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<ion-content>
+
+
+
+
+<div class="container">
+
+  <div class="row">
+    <!-- <div class="box">
+      <h1>Importer liste</h1>-->
+
+      <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6">
+      <img src="../../assets/images/importe.gif" alt="">
+    </div>
+
+
+    <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6">
+
+
+      <form action="">
+
+        <div class="col" class="importer">
+          <i class="fa-solid fa-file-circle-plus" id="iconeImport" style="margin-left: 40%;color: rgb(232, 224, 224)
+          ;"></i>
+          <input type="file" name="files"id="import"class="form-control" (change)="televerser($event)" />
+        </div><br>
+
+        <div class="input mb-3">
+          <label for="inputs" class="form-label">Libelle</label>
+          <input id="inputs" [(ngModel)]="libelleliste"  name="libelle" type="text"  class="form-control" id="inputs" required>
+        </div>
+
+
+<!-- 
+        <div class="input mb-3">
+          <label for="inputs" class="form-label">Activité *</label>
+          <select name="" id="select" class="col" [(ngModel)]="idactivite" [ngModelOptions]="{standalone : true}">
+            <option >{{nom}}</option>
+
+            - <option *ngFor="let lact of listeactivite" >{{lact.nom}}</option> --
+          </select>
+        </div> -->
+
+
+
+        <button type="button" class="btn btn-outline-dark bouton" (click)="importAouP()">Importer</button>
+
+
+      </form>
+    </div>
+  </div>
+  <!-- </div> -->
+
+</div>
+
+
+
+
+
+
+
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Liste participant ou apprenant </ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<ion-content>
+
+<div class="container">
+  <div class="col">
+    <div class="row">
+
+
+
+      <div class="col-sm-12 col-md-6 col-lg-6" class="principal">
+
+          <img src="" alt="">
+          <div class="col"  class="title">Importer </div><br>
+
+      <form action=" ">
+        <div class="row">
+          <div class="col" class="importer"> <i class="fa-solid fa-file-circle-plus"  id="iconeImport"></i>
+            <input type="file"  name="nbredepostulants" id="import" class="form-control" /></div>
+        </div><br>
+
+
+        <div class="row">
+          <div class="col">
+            <label>Activité *</label><br>
+            <select name="" id="select">
+              <option value="">Choisissez une activité</option>
+              <option *ngFor="let lact of listeactivite">{{lact.nom}}</option>
+            </select>
+          </div>
+        </div><br><br>
+
+
+
+
+        <div class="row">
+          <div class="col">
+            <button type="submit" (click)="succesImport()"> <i class="fa-sharp fa-solid fa-download" style="margin-right: 10px;"></i>Importer</button>
+          </div>
+        </div>
+      </form>
+      </div>
+
+
+
+
+
+    </div>
+  </div>
+</div>
+
+</ion-content>
+ -->

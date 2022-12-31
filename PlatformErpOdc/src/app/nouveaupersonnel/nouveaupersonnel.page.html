@@ -1,0 +1,128 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Ajouter personnel</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content>
+  <div class="container">
+    <form action="#" #f="ngForm" autocomplete="off">
+      <a (click)="back()" id="back"> <p><i class="fa fa-hand-o-left" style="font-size:20px"></i> Retour</p></a> 
+      <div class="box">
+        <h1>Nouveau personnel</h1>
+        <div class="ajout">
+          <div class="input-box">
+            <span class="details">Nom *</span>
+            <input type="text" [(ngModel)]="nom" class="form-control" placeholder="Nom du personnel" name="nom" required>
+          </div>
+          <div class="input-box">
+            <span class="details">Email *</span>
+            <div class="mail">
+              <input type="text" class="form-control" [(ngModel)]="email" name="email" placeholder="personnel..." id="inp" required>
+              <!-- <span class="input-group-text" aria-label="fin de mail">@orangemali.com</span> -->
+              <div style="width: 270px;">
+                <select name="domaine" class="mailmodel" class="form-control" [(ngModel)]="domaine">
+                  <option selected>--Choisisez un domaine--</option>
+                  <option *ngFor="let d of formatMail" >{{d.libelle}}</option>
+                  <!-- <option value="">@orangefablab.com</option>
+                  <option value="">@orangemali.com</option>
+                  <option value="">@orangedigitalcenter.com</option> -->
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="input-box">
+            <span class="details">Prénom *</span>
+            <input type="text" class="form-control" [(ngModel)]="prenom" placeholder="Prénom du personnel" name="prenom" required>
+          </div>
+          <!-- <div class="input-box">
+            <span class="details">Date de naissance *</span>
+            <input type="date" [(ngModel)]="datenaissance" placeholder="La date de naissance" name="datenaissance">
+          </div> -->
+          <!-- <div class="input-box">
+            <span class="details">Telephone *</span>
+            <input type="text" [(ngModel)]="telephone" placeholder="Numéro de telephone" name="telephone">
+          </div> -->
+          <div class="input-box">
+            <span class="details">Genre *</span>
+            <select name="genre" class="form-control" [(ngModel)]="genre" class="select" required>
+              <option selected>--Votre genre--</option>
+              <option >Masculin</option>
+              <option >Feminin</option>
+              <!-- <option *ngFor="let entite of Entites" >{{entite.libelleentite}}</option> -->
+              
+            </select>
+        </div>
+<!-- 
+        <div class="input-box">
+          <span class="details">Lieu de nanissance *</span>
+          <select name="lieunaissance" class="form-control" [(ngModel)]="lieunaissance" class="select" required>
+            <option selected>Bamako</option>
+            <option >Kayes</option>
+            <option >Koulikoro</option>
+            <option >Sikasso</option>
+            <option >Segou</option>
+            <option >Mopti</option>
+            <option >Tombouctou</option>
+            <option >Gao</option>
+            <option >Kidal</option>
+              <option >Tadoudeni</option>
+            <option >Menaca</option>
+            
+          </select>
+      </div> -->
+
+      <!-- <div class="input-box">
+        <span class="details" for="phone">Numéro de telephone *</span>
+        <input type="tel"  id="phone" name="contact"  [(ngModel)]="contact" placeholder="70000000" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+
+      </div> -->
+
+          <div class="input-box">
+            <span class="details">Entité *</span>
+            <select class="select" class="form-control" [(ngModel)]="entite" name="entite" required>
+              <option >--Choisisez une entité--</option>
+              <option *ngFor="let entite of Entites" required="required">{{entite.libelleentite}}</option>
+              <!-- <option value="">Orange Digital Kalanso</option>
+              <option value="">Orange FabLab</option> -->
+            </select>
+          </div>
+        
+
+          <div class="input-box">
+            <span class="details">Rôle *</span>
+            <select class="select" class="form-control" [(ngModel)]="role" name="role">
+              <option value="">--Choisisez un role--</option>
+              <option *ngFor="let role of Roles" >{{role.libellerole}}</option>
+            </select>
+          </div>
+  
+          <div class="input-box">
+            <span class="details">Ajouter image *</span>
+            <input type="file" class="form-control" class="form-control" placeholder="Logo.jpg" id="logo"
+              accept="image/png, image/jpeg, image/jpg" (change)="envoyerImage($event)">
+          </div>
+          
+        </div>
+      </div>
+      <div class="button">
+        <button [disabled]="f.form.invalid" [style.backgroundColor]="'#FF7900'"type="button" class="but" (click)="CreateUser()" class="btn btn-outline-dark bouton">Ajouter</button>
+        
+      </div>
+
+    </form>
+  </div>
+
+</ion-content>

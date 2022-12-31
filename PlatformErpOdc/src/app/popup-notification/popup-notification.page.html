@@ -1,0 +1,43 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    
+    <ion-buttons>
+        <ion-button (click)="close()" fill="clear" color="dark">
+            <ion-icon name="close" slot="icon-only"></ion-icon>
+        </ion-button>
+    </ion-buttons>
+    <ion-title>Notification</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+     
+      <div class="pag" *ngFor= "let n of notif ; let index =index;">
+     
+      <div class="card float-left" [routerLink]="['/dashboard/detailactivite',this.n.activite.id]" (click)="close()">
+          <div class="row" >
+              <div class="col-5">
+                  <img class="img" *ngIf= "n.activite.createur.image==null" src="../../assets/avatar.png" alt="imageUtilisateur"/>
+                  <img class="img" *ngIf= "n.activite.createur.image!=null" src="{{n.activite.createur.image}}" alt="imageUtilisateur"/>
+              </div>
+              <div class="col-7">
+                  <div class="card-block">
+                      <h6>{{n.activite.createur.prenom}} {{n.activite.createur.nom}}</h6> 
+
+                      <div class="statutbtn">
+                        
+                          <div class="act-nom">a crée <span>{{n.activite.nom}}</span></div>
+                      </div>
+                  </div>
+              </div>
+
+
+          </div>
+      </div>
+      
+  </div>
+
+  
+  </div>
+</ion-content>

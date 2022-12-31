@@ -1,0 +1,597 @@
+@font-face {
+  font-family: myfontLight;
+
+  src: url("../../assets/font/Poppins-Light.ttf");
+}
+
+@font-face{
+  font-family: myfontBlack;
+  src: url("../../assets/font/Poppins-Black.ttf");
+}
+
+
+.mere{
+background-color:#F2EDED;
+ overflow-y: scroll;
+// scroll-behavior: auto;
+
+}
+
+::-webkit-scrollbar {
+display: none;
+}
+
+.side_droite{
+  margin-left: 3%;
+}
+// ion-button:hover{
+//     background-color: #FF7900;
+//     border-radius: 15px;
+// }
+
+
+
+
+
+// @media screen and (max-width: 990px) {
+//   .side_droite{
+
+//     margin-left: 8%;
+//   }
+// }
+// @media screen and (max-width: 512px) {
+//   .side_droite{
+//     margin-left: 1%;
+//   }
+
+  
+
+ 
+// }
+
+// @media screen and (max-width: 420px) {
+//   .AenCours{
+//     font-weight:700 ; 
+//     font-size: 26Px; 
+//     font-family: myfontBlack;
+//     font-style: normal;
+//    margin-left:20% !important ;
+//    margin-bottom: 20px;
+      
+//   }
+// }
+
+
+.side_gauche{
+background-color:white;
+border-radius: 15px;
+// margin: auto;
+height: 88%;
+
+margin-left: 3%;
+padding: 20px;
+
+}
+
+.image{
+border-radius: 15px;
+margin-bottom: 2%;
+}
+
+@media screen and (max-width: 990px) {
+.side_gauche{
+  background-color:white;
+  border-radius: 5px;
+  margin: auto;
+
+  padding: 20px;
+
+}
+
+}
+@media screen and (max-width: 574px) {
+.side_gauche{
+  background-color:white;
+  border-radius: 15px;
+
+  
+  margin-left: 2%;
+  margin-right: 15%;
+  padding: 15px;
+}
+}
+
+.activite{
+
+margin-bottom:3%;
+background-color:white;
+border-radius: 15px;
+}
+
+.titre_inf{
+font-weight:700 ; 
+font-size: 26Px; 
+font-family: myfontBlack;
+font-style: normal;
+padding-top:10% ;
+}
+
+i{
+font-size: 35px;
+}
+
+.icon2{
+color: #50BE87;
+}
+.icon3{
+color: #4BB4E6;
+}
+
+.icon4{
+color: #FFD200;
+}
+.icon5{
+color: #FF6200;
+}
+
+.reporting{
+margin-top: 90%;
+margin-bottom:10%;
+}
+
+@media screen and (max-width: 990px) {
+.reporting{
+  margin-top: 1%;
+  margin-left: 2%;
+  margin-bottom:10%;
+}
+}
+.text_info{
+border-bottom: 3px solid black;
+font-family: myfontLight;
+font-style: normal;
+font-weight: 400;
+font-size: 19px;
+margin-bottom: 10%;
+
+}
+
+.nombre{
+
+margin-top: 10px;
+font-size: 26px;
+font-weight: 700;
+font-family: myfontBlack;
+}
+
+
+.venir{
+  margin-left: 10%; 
+  margin-right: auto;
+}
+
+.AenCours{
+  font-weight:700 ; 
+  font-size: 26Px; 
+  font-family: myfontBlack;
+  font-style: normal;
+  margin-left:32% ;
+  margin-bottom: 20px;
+  
+  
+  }
+
+  .AVenir{
+
+    font-weight:700 ; 
+    font-size: 26Px; 
+    font-family: myfontBlack;
+    font-style: normal;
+    margin-left:-60% ;
+  }
+
+  .ticketAvenir{
+    background-color: rgba(221, 215, 215, 0.60);
+    border-radius: 15px;
+    color: black;
+    width: 71%;
+    margin-left:3% !important;
+    padding: 2% !important;
+    height: 40%;
+    font-family:myfontBlack;
+    font-size: 20px;
+    position:absolute;
+    top:55%;
+
+    
+  }
+  .content{
+    position: relative;
+    width: 100%;
+  }
+
+@media screen and (max-width:991px) {
+
+  .ticketAvenir{
+    background-color: rgba(221, 215, 215, 0.60);
+    border-radius: 15px;
+    color: black;
+    font-family: myfontLight;
+    width: 91%;
+    margin-left:3%;
+    height: 40%;
+    position:absolute;
+    top:55%;
+  }
+  
+.venir{
+  margin-left:8%; 
+  margin-right: auto;
+}
+
+  .AenCours{
+    font-weight:700 ; 
+    font-size: 20px !important; 
+    font-family: myfontBlack;
+    font-style: normal;
+    
+    margin-left:8% !important ;
+    margin-bottom: 20px;
+   
+    }
+    
+    .AVenir{
+margin-top: 5%;
+      font-weight:700 ; 
+      font-size: 20px !important; 
+      font-family: myfontBlack;
+      font-style: normal;    
+    }
+  
+}
+
+
+
+
+#MiniLeftNav li{
+  list-style: outside none none;
+    margin: 20px 0;
+    padding: 0;
+    width: 48px;
+}
+
+#MiniLeftNav li a{
+    border:solid 1px #ff7900;
+  display: block;
+    padding: 7px;
+    position: relative;
+}
+
+
+#MiniLeftNav span {
+  font-family: myfontLight;
+  font-size:14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  // text-transform: uppercase;
+  bottom: 0;
+  left: 47px;
+  line-height: 38px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0;
+  
+  /* CSS3 Transition: */
+-webkit-transition: 0.50s;
+/* Future proofing (these do not work yet): */
+-moz-transition: 0.50s;
+transition: 0.50s;  
+}
+#MiniLeftNav a:hover span{ width:auto; padding:0 30px;overflow:visible; }
+#MiniLeftNav a:hover{text-decoration:none;}
+#MiniLeftNav a span{
+background-color:#ff7900;
+color:white;
+}
+
+
+
+
+  @media screen and (max-width:846px) {
+      ol, ul {
+        padding-left: 0rem;
+    }
+    
+    dl, ol, ul {
+      margin-top: -6px;
+      margin-bottom: 1rem;
+    }
+    
+    }
+
+
+@media screen and (max-width:991px) {
+ 
+  .desktop{
+    display: none;
+  }
+
+  .phone{
+    display: flex !important;
+      }
+}
+
+.phone{
+  display: none;
+  }
+
+
+
+
+
+
+
+.phone{
+  background-color: #FF7900;
+  color: white;
+  font-weight: bold;
+  font-family:myfontLight ;
+  font-style: normal;
+  border-radius: 15px;
+  width: 90%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.phone:hover{
+  border-color: #FF7900 !important;
+color: #FF7900 !important;
+font-weight: bold;
+font-family:myfontLight ;
+}
+
+.phone> i:hover{
+  color: #FF7900 !important;
+}
+
+
+
+
+.desktop{
+  background-color: #FF7900;
+  color: white;
+  font-weight: bold;
+  font-family:myfontLight ;
+  font-style: normal;
+  border-radius: 15px;
+  width: 90%;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.desktop:hover{
+  border-color: #FF7900 !important;
+color: #FF7900 !important;
+font-weight: bold;
+font-family:myfontLight ;
+}
+
+.desktop> i:hover{
+  color: #FF7900 !important;
+}
+
+
+
+.report{
+background-color: #FF7900;
+color: white;
+font-weight: bold;
+font-family:myfontLight ;
+font-style: normal;
+border-radius: 15px;
+width: 90%;
+height: 50px;
+margin-left: auto;
+margin-right: auto;
+}
+.report:hover{
+border-color: #FF7900 !important;
+color: #FF7900 !important;
+font-weight: bold;
+font-family:myfontLight ;
+}
+
+.img_activite_avenir{
+border-radius: 50%;
+width:30px
+}
+
+.report > i:hover{
+  color: #FF7900 !important;
+}
+
+
+
+
+
+
+
+.nom_activite{
+margin-top: 0%;
+ margin-left: 0px;
+}
+.side{
+display:flex;
+flex-direction: column; 
+justify-content: space-evenly;
+}
+
+
+.carousel-item{
+height: 15rem;
+background: #777;
+position:relative;
+color: white;
+
+
+
+} 
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+
+
+border-radius: 50%;
+border: 1px solid red;
+}
+
+.carousel-control-prev-icon {
+filter: invert(1) grayscale(100);
+color: red !important;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon {
+height: 30px;
+width: 30px;
+outline: black;
+background-color: black;
+background-size: 100%, 100%;
+border-radius: 50%;
+border: 1px solid black;
+}
+
+.carousel-dark .carousel-caption{
+color: white !important;
+}
+.carousel-caption{
+background-color: rgba(221, 215, 215, 0.60);
+border-radius: 15px;
+width: 35%;
+margin-left: auto;
+margin-right:auto;
+}
+
+
+
+h5{
+color: black; 
+font-weight: 700;
+font-family:myfontBlack ;
+}
+.encours_ticket{
+color: black; 
+font-weight: 700;
+font-family:myfontLight ;
+}
+.carousel-inner{
+
+padding-left:10px ;
+ padding-right: 10px;
+
+}
+
+
+
+.carousel-item {
+
+ 
+  height: 25rem;
+  background: #777;
+  position: relative;
+  color: white;
+}
+@media screen and (max-width: 520px) {
+.carousel-item {
+
+  height: 20%;
+  background: #777;
+  position: relative;
+  color: white;
+  
+}
+
+.slide{
+border-radius: 0px;
+
+padding-left:10px ;
+ padding-right: 10px;
+
+}
+}
+
+
+
+
+
+
+.activite{
+padding-top:6%;
+padding-bottom: 5%;
+font-family: myfontBlack;
+}
+
+
+
+.circleblack {
+height: 35px;
+width: 35px;
+border-radius: 50%;
+background-color: black;
+margin-bottom: 2px;
+}
+
+.circlewhite {
+height: 35px;
+width: 35px;
+border-radius: 50%;
+border: 2px solid black;
+background-color: rgb(255, 255, 255);
+margin-bottom: 2px;
+}
+
+.circleorange {
+height: 35px;
+width: 35px;
+border-radius: 50%;
+background-color: #FF6200;
+margin-bottom: 2px;
+
+}
+
+.image{
+width: 193px;
+height: 270px;
+}
+.nomActivite{
+font-size: 12px;
+font-weight: bold;
+}
+.Date{
+font-size: 10px;
+font-weight: bold;
+}
+
+// .divAvecbg{
+//   background-repeat: no-repeat;   background-position: center; background-size: cover; border-radius: 10px;
+// }
+
+.lblAucune{
+  display: flex;
+    justify-content: center;
+    font-size: 25px;
+    position: relative;
+    top: 50%;
+
+}
+// .fa-plus-circle:before {
+ 
+//   color: white;
+// }
+.aucune{
+  display: flex;
+  justify-content: center;
+  font-family: myfontLight;
+
+}

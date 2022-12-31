@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Activités</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="row">
+    <div class="col-lg-3 col-12">
+      <div class="d-grid gap-2 m-2 d-md-flex justify-content-md-start">
+        <select class="form-select form-select-md" aria-label=".form-select-sm example" (change)="filtrebyentity()" >
+          <option >
+            <ion-icon name="funnel-outline" slot="start"></ion-icon>Filtrer par Entité
+          </option>
+          <option *ngFor="let entite of allentity" >{{entite.libelleentite}}</option>
+        </select>
+
+        <select [(ngModel)]="textFiltre" name="textFiltre" class="form-select form-select-md" aria-label=".form-select-sm example" (change)="activitesavenir()">
+          <option >
+            <ion-icon name="funnel-outline" slot="start" selected></ion-icon>Filtrer par Status
+          </option>
+          <option  >Activités en cour</option>
+          <option >Activités à venir</option>
+          <option >Activités Terminées </option>
+        </select>
+
+
+      </div>
+
+    </div>
+    <div class="col-lg-9 col-12">
+      <div class="d-grid m-2 gap-2 d-md-flex justify-content-md-end">
+        <button class="btn buttonColor" type="button" routerLink="/dashboard/allactivity/creer-activites" >+ &nbsp; Creer Activité</button>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+      <div class="pag" *ngFor= "let ta of  touteactivite  | paginate:{itemsPerPage:6, currentPage:p}; let index =index; ">
+          <div class="news-card">
+            <a [routerLink]="['/dashboard/detailactivite',ta.id]" class="news-card__card-link"></a>
+            <img src={{ta.image}} alt="" class="news-card__image">
+            <div class="news-card__text-wrapper">
+              <h2 class="news-card__title">{{ta.nom}}</h2>
+              <div class="news-card__post-date" style="font-size: larger; color:black"><b>{{ta.typeActivite.libelle}}</b></div>
+              <div style="color:#FF7900" >{{ta.etat.statut}}</div>
+
+              <div class="descripppp" style="display:flex; justify-content:space-around;">
+
+                <div > <p >{{ta.description | slice:0:20}} ... </p></div>
+                <div >
+                  <button  style="background-color:#FF7900;color:#FFF;border:none; margin-right: 50px;">
+                      Voir +
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="p=$event" nextLabel="Suivants" previousLabel="Précédents"></pagination-controls>
+</div>
+
+
+</ion-content>

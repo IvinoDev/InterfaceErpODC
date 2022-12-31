@@ -1,0 +1,116 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Liste des tâches</ion-title>
+      <ion-button slot="end" fill="clear">
+        <app-cloche></app-cloche>
+  
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+  
+  <ion-content>
+  
+  
+   
+    <!-- <div class="header">
+   -->
+  
+      <!-- <div class="headerContent">
+      
+        <button  class="tache" routerLink="">Ajouter tâche</button>
+      </div>
+    </div> -->
+   
+    <div class="container">
+        <div> 
+            <button  class="tache" [routerLink]="['/dashboard/creertachesdesignation',id]">Ajouter tâche</button>
+        </div>
+        <table class="table table-striped"  >
+            <thead class="thead entete" >
+              <tr>
+                <th>N°</th>
+                <th>Désignation</th>
+                <th>Réalisateur</th>
+                <th>Lieu</th>
+                <th>Statut</th>
+                <th>Date début</th>
+                <th>Date fin</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody >
+              <tr *ngFor="let tache of taches">
+
+                <td>{{tache.id}}</td>
+                <td>{{tache.designation.libelle}}</td>
+                <td> {{tache.porteurInterne.nom}} {{tache.porteurInterne.prenom}}</td>
+                <td>{{tache.salle.libelle}}</td>
+                <td>{{tache.statut.libelle}}</td>
+                <td>{{tache.datedebut | date: "dd MMMM yyyy"}}</td>
+                <td>{{tache.datefin | date: "dd MMMM yyyy"}}</td>
+                <td> 
+                  <!-- <a [routerLink]="['/dashboard/modifiertache/',tache.id ]"><i class="bi bi-pencil-square"
+                      style="color: green; font-size:20px;" ></i>
+                    </a>  -->
+                    <a (click)="popDeleteTache(tache.id)">
+                      <i class="bi bi-trash3"
+                           style="color: red; font-size:20px;"></i>
+                    </a>
+                </td>
+              </tr>    
+              </tbody>
+          </table>
+        </div>
+    
+      <!-- <button  class="tache" routerLink="">Ajouter tâche</button>
+    </div>
+  </div> -->
+ 
+  <!-- <div class="container">
+      <div> 
+          <button  class="tache" [routerLink]="['/dashboard/creertachesdesignation',id]">Ajouter tâche</button>
+      </div>
+      <table class="table table-striped"  >
+          <thead class="thead entete" >
+            <tr>
+              <th>Désignation</th>
+              <th>Réalisateur</th>
+              <th>Lieu</th>
+              <th>Statut</th>
+              <th>Date début</th>
+              <th>Date fin</th>
+            </tr>
+          </thead>
+          <tbody *ngFor="let tache of taches">
+            <tr >
+              {{tache.designation.libelle}}
+              {{tache.porteur}} -->
+              <!-- <td>{{tache.designation.libelle}}</td>
+              <td> {{tache.porteurInterne.nom}} {{tache.porteurInterne.prenom}}</td>
+              <td>{{tache.salle.libelle}}</td>
+              <td>{{tache.statut.libelle}}</td>
+              <td>{{tache.datedebut | date: "dd MMMM yyyy"}}</td>
+              <td>{{tache.datefin | date: "dd MMMM yyyy"}}</td>
+            </tr>    
+            </tbody>
+        </table>
+      </div> -->
+  
+
+
+  <!-- <div class="header">
+
+    <div class="headerContent">
+      <button  class="filtre2" ><i class="fa fa-download" aria-hidden="true"></i> Télécharger </button>
+      <pagination-controls (pageChange)="a = $event" nextLabel="Suivants" previousLabel="Précédents" ></pagination-controls>
+
+    </div>
+  </div>  -->
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="p=$event" nextLabel="Suivants" previousLabel="Précédents"></pagination-controls>
+</div>
+</ion-content>

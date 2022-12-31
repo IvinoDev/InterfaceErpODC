@@ -1,0 +1,564 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Salles</ion-title>
+        <ion-button slot="end" fill="clear">
+            <app-cloche></app-cloche>
+
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+    <div class="container cont">
+        <div class="row">
+
+            <div class="row justify-content-center">
+                <button type="button" class="btn ajout" routerLink="/dashboard/salle/creer-salle">Ajouter Salle</button>
+            </div>
+
+            <div class="col- col-sm-12 col-md-5 col-lg-5 col-xl-5 ">
+
+                <div class="row ">
+
+                    <div class="row titlediv ">
+
+                        <div class="title"> Salles Disponibles</div>
+                    </div>
+
+
+                    <div class="col salles" style="background-color: #D9D9D9;">
+                        <div *ngIf="sallesDipoLength == 0">Aucune salle disponible</div>
+
+
+                        <div class="col chaquesalle" *ngFor="let salle of sallesDipo">
+                            <div class="row" *ngIf="sallesDipoLength!=0">
+                                <div class="col ">
+                                    <img class="img" src="../../assets/salle.png" alt="">
+                                </div>
+                                <div  class="col" style=" margin-top: 10px;
+                                    margin-left: 10px;
+                                    width: 50%;">
+                                    <div class="col">{{salle.libelle}}</div>
+                                    <div class="col">{{salle.etage}}</div>
+                                </div>
+                                <div class="col justify-content-end" style=" margin-top: 10px;
+                                    margin-left: 10px;
+                                    width: 50%;">
+                                    <div class="col">
+
+                                        <button type="button" class="btn btn-outline-dark" [routerLink]="['/dashboard/liaisonsalle',salle.id]">Lier Activité</button>
+
+                                    </div>
+                                    <div class="row icondiv" style=" margin-top: 10px;">
+                                        <div class="col"><a [routerLink]="['/dashboard/salle/modifier-salle',salle.id]"><i class="bi bi-pencil-square"
+                                            style="color: green; font-size:20px;" ></i></a></div>
+                                        <div class="col">
+                                             <a (click)="popDeleteSalle(salle.id)">
+                                            <i class="bi bi-trash3"
+                                                style="color: red; font-size:20px;"></i>
+                                            </a>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+            <div class="col- col-sm-12 col-md-2 col-lg-2 col-xl-2 ">
+
+                <div class="d-flex justify-content-center  " style="height: 100%;">
+                    <div class="vr separator1" style="width: 4px"></div>
+                </div>
+
+
+
+
+            </div>
+            <div class="col- col-sm-12 col-md-5 col-lg-5 col-xl-5 ">
+
+                <div class="row ">
+
+                    <div class="row titlediv " id="titlediv">
+
+                        <div class="title"> Salles Occupées</div>
+                    </div>
+
+                    <!-- les salle occuper -->
+
+                    <div class="col salles" style="background-color: #D9D9D9;">
+
+                        <div *ngIf="sallesIndispoLength==0">Aucune salle Occupée</div>
+
+
+                        <div  class="col chaquesalle" *ngFor="let salle of sallesIndispo">
+                            <div class="row" *ngIf="sallesIndispoLength!=0">
+                                <div class="col ">
+                                    <img class="img" src="../../assets/salle.png" alt="">
+                                </div>
+
+                                <div  class="col" style=" margin-top: 10px;
+                                    margin-left: 10px;
+                                    width: 50%;">
+                                    <div class="col">{{salle.libelle}}</div>
+                                    <div class="col">{{salle.etage}}</div>
+                                </div>
+                                <div class="col justify-content-end" style=" margin-top: 10px;
+                                        margin-left: 10px;
+                                        width: 50%;">
+                                    <div class="col">
+
+                                        <button type="button" class="btn btn-outline-dark" disabled >Lier Activité</button>
+
+                                    </div>
+                                    <div class="row icondiv" style=" margin-top: 10px;">
+                                        <div class="col"><a [routerLink]="['/dashboard/salle/modifier-salle',salle.id]"><i class="bi bi-pencil-square"
+                                                style="color: green; font-size:20px;" ></i></a></div>
+
+                                        <div class="col">
+
+                                            <a (click)="popDeleteSalle(salle.id)">
+                                            <i class="bi bi-trash3"
+                                                style="color: red; font-size:20px;"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </div>
+    </div>
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ##################################la version 2##############################################"""" -->
+
+
+
+
+
+
+
+
+<!-- <ion-header>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer"
+  />
+  <ion-toolbar>
+      <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <div class="row">
+          <div class="col">
+              <ion-title style="color: #FF7900;margin-top: 7px; margin-left: 10px;">Salles</ion-title>
+          </div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col"></div>
+          <div class="col" style="width: 100%; color:#FF7900; font-size: 30px;"><i class="fa-regular fa-bell"></i></div>
+      </div>
+       <div>
+          <button> Ajouter une Salle</button>
+      </div> -->
+<!-- </ion-toolbar>
+
+
+</ion-header> -->
+<!--
+<ion-content>
+
+  <div class="row justify-content-center">
+    <button type="button" class="btn btn-outline-dark ajout ">Ajouter Salle</button>
+   </div>
+
+
+   <div class="container">
+    <h1 style=" color:#FF7900;">Orange Digital Center</h1>
+
+    <ul class="timeline">
+
+        <li class="timeline">
+            <div class="icon done"></div>
+            <details class="panel">
+
+                <summary>Salle Disponible</summary>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="col chaquesalle">
+                  <div class="row">
+                      <div class="col ">
+                          <img class="img" src="../../assets/salle.png" alt="">
+                      </div>
+                      <div class="col" style=" margin-top: 20px;
+                      margin-left: 10px;
+                      width: 50%;">
+                              <div class="col">Nom Salle</div>
+                              <div class="col">1ere etage</div>
+                      </div>
+                      <div class="col justify-content-end" style=" margin-top: 10px;
+                      margin-left: 10px;
+                      width: 100%;" >
+                          <div class="col">
+
+                              <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                          </div>
+                          <div class="row icondiv" style=" margin-top: 10px;">
+
+                              <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                              <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+
+
+
+
+              <div class="col chaquesalle">
+                <div class="row">
+                    <div class="col ">
+                        <img class="img" src="../../assets/salle.png" alt="">
+                    </div>
+                    <div class="col" style=" margin-top: 20px;
+                    margin-left: 10px;
+                    width: 50%;">
+                            <div class="col">Nom Salle</div>
+                            <div class="col">1ere etage</div>
+                    </div>
+                    <div class="col justify-content-end" style=" margin-top: 10px;
+                    margin-left: 10px;
+                    width: 100%;" >
+                        <div class="col">
+
+                            <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                        </div>
+                        <div class="row icondiv" style=" margin-top: 10px;">
+
+                            <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                            <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col chaquesalle">
+              <div class="row">
+                  <div class="col ">
+                      <img class="img" src="../../assets/salle.png" alt="">
+                  </div>
+                  <div class="col" style=" margin-top: 20px;
+                  margin-left: 10px;
+                  width: 50%;">
+                          <div class="col">Nom Salle</div>
+                          <div class="col">1ere etage</div>
+                  </div>
+                  <div class="col justify-content-end" style=" margin-top: 10px;
+                  margin-left: 10px;
+                  width: 100%;" >
+                      <div class="col">
+
+                          <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                      </div>
+                      <div class="row icondiv" style=" margin-top: 10px;">
+
+                          <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                          <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+
+
+
+          <div class="col chaquesalle">
+            <div class="row">
+                <div class="col ">
+                    <img class="img" src="../../assets/salle.png" alt="">
+                </div>
+                <div class="col" style=" margin-top: 20px;
+                margin-left: 10px;
+                width: 50%;">
+                        <div class="col">Nom Salle</div>
+                        <div class="col">1ere etage</div>
+                </div>
+                <div class="col justify-content-end" style=" margin-top: 10px;
+                margin-left: 10px;
+                width: 100%;" >
+                    <div class="col">
+
+                        <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                    </div>
+                    <div class="row icondiv" style=" margin-top: 10px;">
+
+                        <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                        <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+            </details>
+
+
+        </li>
+
+        <li class="timeline">
+            <div class="icon done"></div>
+            <details class="panel">
+                <summary>Salles Occupées</summary>
+
+
+
+
+                <div class="col chaquesalle">
+                  <div class="row">
+                      <div class="col ">
+                          <img class="img" src="../../assets/salle.png" alt="">
+                      </div>
+                      <div class="col" style=" margin-top: 20px;
+                      margin-left: 10px;
+                      width: 50%;">
+                              <div class="col">Nom Salle</div>
+                              <div class="col">1ere etage</div>
+                      </div>
+                      <div class="col justify-content-end" style=" margin-top: 10px;
+                      margin-left: 10px;
+                      width: 100%;" >
+                          <div class="col">
+
+                              <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                          </div>
+                          <div class="row icondiv" style=" margin-top: 10px;">
+
+                              <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                              <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+
+
+
+
+
+
+              <div class="col chaquesalle">
+                <div class="row">
+                    <div class="col ">
+                        <img class="img" src="../../assets/salle.png" alt="">
+                    </div>
+                    <div class="col" style=" margin-top: 20px;
+                    margin-left: 10px;
+                    width: 50%;">
+                            <div class="col">Nom Salle</div>
+                            <div class="col">1ere etage</div>
+                    </div>
+                    <div class="col justify-content-end" style=" margin-top: 10px;
+                    margin-left: 10px;
+                    width: 100%;" >
+                        <div class="col">
+
+                            <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                        </div>
+                        <div class="row icondiv" style=" margin-top: 10px;">
+
+                            <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                            <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="col chaquesalle">
+              <div class="row">
+                  <div class="col ">
+                      <img class="img" src="../../assets/salle.png" alt="">
+                  </div>
+                  <div class="col" style=" margin-top: 20px;
+                  margin-left: 10px;
+                  width: 50%;">
+                          <div class="col">Nom Salle</div>
+                          <div class="col">1ere etage</div>
+                  </div>
+                  <div class="col justify-content-end" style=" margin-top: 10px;
+                  margin-left: 10px;
+                  width: 100%;" >
+                      <div class="col">
+
+                          <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                      </div>
+                      <div class="row icondiv" style=" margin-top: 10px;">
+
+                          <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                          <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+
+
+
+
+          <div class="col chaquesalle">
+            <div class="row">
+                <div class="col ">
+                    <img class="img" src="../../assets/salle.png" alt="">
+                </div>
+                <div class="col" style=" margin-top: 20px;
+                margin-left: 10px;
+                width: 50%;">
+                        <div class="col">Nom Salle</div>
+                        <div class="col">1ere etage</div>
+                </div>
+                <div class="col justify-content-end" style=" margin-top: 10px;
+                margin-left: 10px;
+                width: 100%;" >
+                    <div class="col">
+
+                        <button type="button" class="btn lierAct ">Lier Activité</button>
+
+                    </div>
+                    <div class="row icondiv" style=" margin-top: 10px;">
+
+                        <div class="col"><i class="bi bi-pencil-square" style="color: green; font-size:20px;"></i></div>
+                        <div class="col"><i class="bi bi-trash3" style="color: red; font-size:20px;"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+              </details>
+        </li>
+
+
+
+
+
+    </ul>
+</div>
+
+</ion-content> -->

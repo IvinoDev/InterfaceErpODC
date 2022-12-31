@@ -1,0 +1,46 @@
+
+// les style appliquer au modal 
+.text{
+  font-family: myfon2;
+  font-size: 25px;
+  font-weight: 700;
+  
+}
+.colorbutton1{
+  background-color: rgba($color: #001AFF, $alpha: .85);
+  color: #ffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+.colorbutton2{
+  background-color:  rgba($color: #009E2C, $alpha: .85);
+  color: #ffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+.colorbutton3{
+  background-color:  rgba($color: #FF0000, $alpha: .85);
+  color: #ffff;
+  padding: 5px;
+  border-radius: 10px;
+}
+.colorbutton1:hover{
+  background-color: rgba($color: #ffff, $alpha: .85);
+  color: #001AFF;
+  border: 1px solid #001AFF;
+}
+.colorbutton2:hover{
+  background-color:  rgba($color: #ffff, $alpha: .85);
+  color: #009E2C;
+  border: 1px solid #009E2C;
+}
+.colorbutton3:hover{
+  background-color:  rgba($color: #ffff, $alpha: .85);
+  color: #FF0000;
+  border: 1px solid #FF0000;
+}
+ion-modal{
+  --height:12em !important;
+  --border-radius: 15px;
+  // --width: 30em;
+}

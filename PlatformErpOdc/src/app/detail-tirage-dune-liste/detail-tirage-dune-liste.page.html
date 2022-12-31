@@ -1,0 +1,112 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Détail liste</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <div class="gauche">
+
+      <div class="menuResponsive">
+        <div class="libelleListe">
+          <div class="labelContainer" >
+              <label for="">{{detList}}</label>
+          </div>
+        </div>
+        <div class="photo">
+          <div class="labelContainer">
+              <img class="photo" src="../../assets/mygif.gif" alt="">
+          </div>
+        </div>
+        <div class="nbrePost">
+          <div class="labelContainer">
+              <label for="">{{nbrPost}} Postulants</label>
+          </div>
+        </div>
+        <div class="dateImport">
+          <div class="labelContainer">
+              <label for="">{{dateImpList | date: "dd MMMM yyyy" }}</label>
+          </div>
+        </div>    
+      </div>
+
+      <div *ngIf="listparidLength==0" class="aucunT">Accun tirage !</div> 
+
+      <div *ngIf="listparidLength!=0">
+        <!-- barre de recherche et son input -->
+        <div class="searchBar">
+          <div class="InputSearch">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" #FF7900" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+            </svg>
+            <input type="text" name="motCle" id="motCle" placeholder="Recherche liste" > <!-- [(ngModel)]="searchText" -->
+          </div>
+        </div>
+
+        <table class="table table-striped text-center">
+          <thead>
+            <tr>
+              <th scope="col">N°</th>
+              <th scope="col">Libelle</th>
+              <th scope="col" class="hideColonne hideColonneOder">Date</th>
+              <th scope="col">Nombre postulant tiré</th>
+              <th scope="col" class="hideColonne hideColonneOder">Etat</th>
+              <th scope="col" class="hideColonne">Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr *ngFor="let trg of listparid | paginate: { itemsPerPage: 10, currentPage: p}">
+              <td> {{trg.id}}</td>
+              <td> {{trg.libelle}}</td> 
+              <td class="hideColonne hideColonneOder"> {{trg.date | date: "dd MMMM yyyy à hh:mm"}} </td>
+              <td> {{trg.postulanttires.length}}</td>
+              <td class="hideColonne hideColonneOder" *ngIf="trg.valider==true" > Validé</td>
+              <td class="hideColonne hideColonneOder" *ngIf="trg.valider==false" > Non validé</td>
+              <td class="hideColonne"><span class="voirPlus" (click)="goResultatTirage(trg.id)" >voir <ion-icon name="add-outline"></ion-icon></span> </td>
+            </tr>
+  
+            <pagination-controls (pageChange)=" p = $event"> </pagination-controls>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+    <div class="droite">
+
+      <div class="libelleListe">
+        <div class="labelContainer" >
+            <label for="">{{detList}}</label>
+        </div>
+      </div>
+
+      <div class="photo">
+        <div class="labelContainer">
+            <img src="../../assets/mygif.gif" alt="">
+        </div>
+      </div>
+
+      <div class="nbrePost">
+        <div class="labelContainer">
+            <label for="">{{nbrPost}}</label>
+            <label for="">Postulants</label>
+        </div>
+      </div>
+
+      <div class="dateImport">
+        <div class="labelContainer">
+            <label for="">{{dateImpList | date: "dd MMMM yyyy" }}</label>
+        </div>
+      </div>
+
+    </div>
+   
+  </div>
+</ion-content>

@@ -1,0 +1,583 @@
+@font-face {
+    font-family: myfon1;
+    src: url("../../assets/font/Poppins-Light.ttf");
+}
+@font-face {
+    font-family: myfon3;
+    src: url("../../assets/font/Poppins-Black.ttf");
+}
+#back{
+    display: none;
+}
+ion-content{
+    font-family: myfon3;
+    --ion-background-color: #ffff;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+img{
+    margin-top: 10px;
+    width: 36px;
+}
+
+.center{
+    display: block;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    height: 400px;
+    width: 420px;
+}
+.info{
+    text-align:center;
+}
+ion-list{
+    padding: 0% 20% 0% 20%;
+}
+
+// ion-label{
+//     font-weight: bolder;
+// }
+
+.taille1{
+    font-weight: bolder;
+}
+.taille2{
+    font-size: 18px;
+  }
+
+
+.buttom{
+    padding: 0% 20% 0% 20%;
+    display: flex;
+    flex-direction: row;
+}
+.button1{
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 2em;
+}
+
+.but1, .but2{
+    letter-spacing: 2px;
+    padding: 10px;
+    margin-right: 4em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border: 1px solid #FF6200;
+    border-radius: 15px;
+    background-color: #FF6200;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+}
+.but1:hover, .but2:hover{
+    background-color: #ffff;
+    color: #FF6200;
+    border: 1px solid #FF6200;
+}
+
+.firsttitle{
+    // text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.mail{
+    display: flex;
+    flex-direction: row;
+    color: #000;
+    background-color: #f8fafc;
+}
+ion-title{
+    color: #FF7900;
+}
+
+// ion-content {
+//     display: flex;
+//     height: 100vh;
+//     justify-content: center;
+//     align-items: center;
+//     padding: 10px;
+// }
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 6px;
+    position: absolute;
+    top: 15%;
+    background-color: #FFF;
+    color: #FF7900;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-wrapper {
+    transform: translate3d(0px, 40px, 0px);
+    opacity: 0.01;
+    height: 38rem;
+    overflow-y: scroll;
+    scrollbar-color: rebeccapurple green;
+    scrollbar-width: thin;
+    width: 45rem;
+  }
+.container {
+   
+    max-width: 900px;
+    // width: 100%;
+    padding: -1px 30px;
+    border-radius: 15px;
+    background: #fff;
+    // border: #000 3px solid;
+    // margin: 20px auto;
+    height: 33rem;
+}
+ion-modal{
+   
+    --border-radius: 15px;
+    --width: 48em;
+    --height: 39em;
+  }
+
+
+.box {
+    width: 80%;
+    padding: 80px 30px;
+    border-radius: 15px;
+    // margin: 5% auto;
+    height: 33rem;
+}
+.mail{
+    position: relative;
+}
+#inp{
+    border-radius: 15px 0px 0px 15px;
+}
+.mailmodel{
+    color: #000;
+    background-color: #E9ECEF;
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 0px 15px 15px 0px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    border-bottom-width: 2px;
+    transition: all 0, 3s ease;
+    padding-left: 1px;
+    color: #000;
+    width: 100%;
+    padding: 3.25%;
+    align-items: center;
+}
+
+input {
+    color: #000;
+    background-color: #f8fafc;
+}
+
+.container form .ajout {
+    color: #FF7900;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 4rem 0 12px 0;
+}
+
+form .ajout .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.select {
+    color: #000;
+    width: 100%;
+    padding: 3.25%;
+    margin-top: 1px;
+    align-items: center;
+    border-radius: 15px;
+}
+
+.ajout .input-box .details {
+    display: block;
+    font-weight: 500;
+    
+}
+
+#details {
+    border-radius: 15px;
+}
+
+.ajout .input-box input {
+    outline: none;
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 14px;
+    border-bottom-width: 2px;
+    transition: all 0, 3s ease;
+}
+
+.ajout .input-box input:focus,
+.ajout .input-box input:valid {
+    border-color: #ccc;
+}
+
+form .button {
+    height: 45px;
+    margin: 45px 0;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-right: 10rem;
+}
+
+.but {
+    border-radius: 15px;
+    padding: 8px;
+    background-color: #FF7900;
+    color: #FFF;
+    border: #FF7900 1px solid;
+    margin-right: 30px;
+}
+
+.but:hover {
+    background: #FFF;
+    color: #FF7900;
+}
+
+form .button .input {
+    height: 100%;
+    width: 45%;
+    color: #FFFF;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 15px;
+    letter-spacing: 1px;
+   
+}
+
+form .button input:hover {
+    background: linear-gradient(135deg);
+}
+
+textarea {
+    color: #000;
+}
+
+
+@media only screen and (max-width: 1106px) {
+    ion-list{
+        padding: 0% 10% 0% 10%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    ion-list{
+        padding: 0% 20% 0% 20%;
+    }
+    ion-list{
+        padding: 0% 10% 0% 10%;
+    }
+    .but1, .but2{
+        letter-spacing: 1px;
+        margin-right: 2em;
+        padding: 10px;
+    }
+}
+@media only screen and (max-width: 640px) {
+   
+    .but1, .but2{
+        margin-right: 1em;
+        padding: 6px;
+    }
+    ion-list{
+        padding: 0px;
+       
+    }
+    .buttom{
+        padding: 0% 10% 0% 10%;
+    }
+    .taille2{
+        font-size: 16px; 
+    }
+   
+    ion-label{
+        margin-right: 10px;
+    }
+}
+@media only screen and (max-width: 460px) {
+    .but1, .but2{
+        margin-right: 6px;
+        padding: 6px;
+        font-size: 18px;
+    }
+    ion-list{
+        padding: 0px;
+    }
+    .buttom{
+        padding: 0% 5% 0% 5%;
+    }
+    .taille2{
+        font-size: 13px; 
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .buttom{
+        padding: 0% 5% 0% 5%;
+        display: flex;
+        flex-direction: row;
+    }
+    .buttom1{
+        height: 20px;
+        margin-bottom: 2em;
+    }
+    .but1, .but2{
+       padding: 10px;
+       font-size: 13px;
+    }
+}
+
+// @media only screen and (max-width: 316px) {
+//     .buttom{
+//         padding: 0% 5% 0% 5%;
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .button1{
+//         height: 50px;
+//         margin-left: 10px;
+       
+//     }
+//     .button2{
+//         margin-left: 10px;
+        
+//     }
+//     .but1{
+//         margin-right: 20px;
+//         height: 40px;
+//         padding: 10px;
+//         font-size: 10px;
+//      }
+//      .but2{
+//         height: 40px;
+//         padding: 10px;
+//         font-size: 10px;
+//      }
+//     .info{
+//         font-weight: 700;
+//         text-align:center;
+//         font-size: 12px;
+//     }
+//     .taille2{
+//         font-size: 12px; 
+//     }
+//     .taille1{
+//         font-size: 16px;
+//     }
+//     ion-label{
+//         margin-right: 10px;
+//     }
+//     ion-list{
+//         padding: 0px;
+//     }
+ 
+   
+// }
+
+
+
+// style appliquer au different button
+
+.buttonColor {
+    background: #ff7900;
+    border-radius: 15px;
+    color: #ffffff;
+  }
+  
+  .buttonColor:hover {
+    border: 1px solid #ff7900 !important;
+    border-radius: 15px;
+    color: #ff7900 !important;
+  }
+
+
+@media (max-width: 1010px) {
+    .mailmodel span{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 584px) {
+    h1{
+        top: 11%;
+    }
+    .container {
+        max-width: 100%;
+    }
+    form .ajout .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    .container form .ajout {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+    h1 {
+        width: max-content;
+        font-size: 18px;
+    }
+    .ajout::-webkit-scrollbar {
+        width: 0;
+    }
+}
+@media (max-width: 390px) {
+    .mailmodel span{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 20px;
+        padding-right: 2rem;
+    }
+}
+@media (max-width: 316px) {
+    .select{
+        font-size: 15px;
+    }
+    .firsttitle{
+        margin-left: none;
+        font-size: 1rem;
+    }
+    ion-title{
+        margin-left: 1em;
+    }
+    .col i{
+        margin-right: 1em;
+        margin-bottom: 1em;
+        font-size: 20px;
+    }
+   .buttom{
+    height: 25px;
+    margin: 30px 0;
+   }
+   .but{
+    font-size: 13px;
+   }
+    .details{
+        font-size: 14px;
+    }
+    .mailmodel span{
+        font-size: 10px;
+    }
+    h1{
+        margin-bottom: 2rem;
+        font-size: 16px;
+        padding-right: 2rem;
+        top: 6%;
+    }
+    .ajout{
+       height: 1000px;
+    }
+    .card{
+        height: 800px;
+    }
+    .box{
+        top: 9%;
+        padding: 6px;
+        // border: #000 1px solid;
+        width: 100%;
+        height: 420px;
+    }
+   .btn-close{
+    display: none;
+   }
+    .container{
+       height: 450px;
+    }
+    .ajout .input-box input {
+        font-size: 12px;
+    }
+    #back{
+        display: inline;
+        cursor: pointer;
+      }
+      
+}
+
+
+
+
+
+
+// les style appliquer au modal 
+.text{
+    font-family: myfon2;
+    font-size: 25px;
+    font-weight: 700;
+  
+  }
+  .colorbutton1{
+    background-color: rgba($color: #001AFF, $alpha: .85);
+    color: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .colorbutton2{
+    background-color:  rgba($color: #009E2C, $alpha: .85);
+    color: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .colorbutton3{
+    background-color:  rgba($color: #FF0000, $alpha: .85);
+    color: #ffff;
+    padding: 5px;
+    border-radius: 10px;
+  }
+  .colorbutton1:hover{
+    background-color: rgba($color: #ffff, $alpha: .85);
+    color: #001AFF;
+    border: 1px solid #001AFF;
+  }
+  .colorbutton2:hover{
+    background-color:  rgba($color: #ffff, $alpha: .85);
+    color: #009E2C;
+    border: 1px solid #009E2C;
+  }
+  .colorbutton3:hover{
+    background-color:  rgba($color: #ffff, $alpha: .85);
+    color: #FF0000;
+    border: 1px solid #FF0000;
+  }
+ 
+
+.card{
+    width: 1000px;
+    height: 900px;
+}
+.container{
+    width: 2000px;
+}
+

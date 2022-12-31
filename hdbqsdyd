@@ -1,0 +1,471 @@
+[33mcommit 82db431a15042fec039143fff29212812bf6431a[m[33m ([m[1;36mHEAD -> [m[1;32mabba[m[33m)[m
+Merge: 0206c51 2bbf588
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Oct 2 15:34:29 2022 +0000
+
+    biding toutes les activites
+
+[33mcommit 0206c516da17d824e6d802218f301b3bb33f371d[m[33m ([m[1;31morigin/abba[m[33m)[m
+Merge: 48a32fa a1240e2
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sat Oct 1 23:49:15 2022 +0000
+
+    debuT PUSH tout
+
+[33mcommit 2bbf58845c4a887307a795b707e0f81aa7877a65[m[33m ([m[1;31morigin/fatoutest[m[33m)[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Sat Oct 1 15:23:41 2022 +0000
+
+    version acceptable de tout sur activité
+
+[33mcommit 48a32fad38d0f2d3c1d3a02a6a2389b5799b1c20[m
+Merge: 93c9691 d602a00
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Fri Sep 30 15:18:02 2022 +0000
+
+    pull de ballo
+
+[33mcommit 40e00cea23cecdfb28eeff80d14ac44c0de4a819[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Fri Sep 30 13:39:52 2022 +0000
+
+    fs push 1339
+
+[33mcommit a1240e2f0a70a3dba2d1ec0e2e919ace54312dfd[m[33m ([m[1;31morigin/karim[m[33m)[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Fri Sep 30 10:00:10 2022 +0000
+
+    media
+
+[33mcommit 4a3e7f4eb89306dc37e9b14406ca615fba148bfc[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Fri Sep 30 09:17:12 2022 +0000
+
+    mettre les les codes css qui étaient dans le code html dans le code css
+
+[33mcommit 18d11eae203f7f0411f080df9af5303f6853009f[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 21:34:03 2022 +0000
+
+    add profile page
+
+[33mcommit 8707f2f35a3ac19dc4e2f5b6b04518151814d89f[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 11:35:42 2022 +0000
+
+    problème scroll bar résolu
+
+[33mcommit 7c1bffc7a3d652a4e348d584d33250040ebb2e11[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 11:08:25 2022 +0000
+
+    add les div activités à venir
+
+[33mcommit e35aeba55a9f3c08c1d61d26e4707ebb1d216c3b[m
+Merge: 6e4179d 6e39e44
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Thu Sep 29 10:13:39 2022 +0000
+
+    gestion erreur par
+
+[33mcommit 7d24b7849c032b4e3bf2bb964fd507a8617528e1[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 05:08:57 2022 +0200
+
+    media pour la responsivité
+
+[33mcommit 45ceae0a8a8bdb3cc8e4f4b609626a57292ff6af[m
+Merge: 91a3175 542d624
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 04:24:21 2022 +0200
+
+    add to link of fontawasome in index.html and change the icons of information in left page of home page
+
+[33mcommit 91a3175744bb4078ad368b5c6cfd2c113b7f0cad[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Thu Sep 29 03:56:40 2022 +0200
+
+    test
+
+[33mcommit 542d624453c73c936aa7f9c695973b8bb02dc26d[m
+Merge: f4ff4a9 8442680
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Wed Sep 28 20:21:32 2022 +0000
+
+    Accueil
+
+[33mcommit 6e4179d570a3044a12ac83419c8e1825cdf6ddba[m
+Merge: 4918a16 d4de988
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Wed Sep 28 19:31:42 2022 +0000
+
+    commit
+
+[33mcommit 6e39e44188dd8991a17d84546b5fc46099c9d912[m
+Author: Abdoulaye Sy <doulsy2021@gmail.com>
+Date:   Wed Sep 28 19:30:51 2022 +0000
+
+    envoie a fc
+
+[33mcommit 4918a16f885be7bd8d3cfce7dc3f1e9a3baa0271[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Wed Sep 28 19:26:02 2022 +0000
+
+    commit
+
+[33mcommit 189bbcefd0b61157cc19b4b84bc5017875f46658[m
+Merge: 0354d7d 8442680
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Wed Sep 28 19:03:59 2022 +0000
+
+    commit
+
+[33mcommit 0354d7d63218f8b7383903c67232b7d080a3e057[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Wed Sep 28 18:46:15 2022 +0000
+
+    loginvalider
+
+[33mcommit d602a0067b102ea2620d1c6a28a793d3df93a95e[m[33m ([m[1;31morigin/ballo[m[33m)[m
+Merge: 4219c42 f9b32f8
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Wed Sep 28 09:20:40 2022 +0000
+
+    avant pull fc
+
+[33mcommit d4de9887548234e780eef894325c040d7680f298[m
+Author: Abdoulaye Sy <doulsy2021@gmail.com>
+Date:   Mon Sep 26 19:07:26 2022 +0000
+
+    Nouvelle activité complet
+
+[33mcommit f4ff4a977367d5f6f3aeb22a8a85322220475a97[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Mon Sep 26 17:35:20 2022 +0000
+
+    nouvelle carrousel
+
+[33mcommit 93c969175b3efe6347a9bb2ee5f43fde45f6964b[m
+Merge: afe223b 8feb884
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Mon Sep 26 12:32:04 2022 +0000
+
+    entite
+
+[33mcommit afe223bc8ce8d2fdfbf63d298902ea813a8f9694[m
+Merge: 3e32061 e549fb9
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Mon Sep 26 09:29:56 2022 +0000
+
+    lundi
+
+[33mcommit 3e32061b8e8d1b37a02e445118d3ecd2a09568cd[m
+Merge: c073ee9 d57b1b7
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Sep 25 19:38:10 2022 +0000
+
+    partie rokiatou
+
+[33mcommit c073ee994ec868dbe71705616b02f5001628da4a[m
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Sep 25 19:24:03 2022 +0000
+
+    salles
+
+[33mcommit e549fb9c4d0a94655a9a5426ccf00f84c1154163[m[33m ([m[1;31morigin/Senou[m[33m)[m
+Author: Kalifa SENOU <kalifasenou10@gmail.com>
+Date:   Sun Sep 25 17:39:28 2022 +0000
+
+    ajout bouton
+
+[33mcommit 8442680b8cdf78904a617e4b614838009afbe700[m
+Author: Dmchez33 <iddembele206@gmail.com>
+Date:   Sun Sep 25 17:30:58 2022 +0000
+
+    amelioration de sidebare
+
+[33mcommit 4219c4216ec8bf46443aa13ea5b19ee361884d00[m
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 17:01:14 2022 +0000
+
+    avant pul abasse
+
+[33mcommit f9b32f861e60190dd6264a158941e0631def264c[m
+Merge: 4d2d647 18eb7e8
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Sep 25 16:57:15 2022 +0000
+
+    ajout entite
+
+[33mcommit 21db739268672353309a7359a5273cdecbe30571[m
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 16:13:48 2022 +0000
+
+    modif salle
+
+[33mcommit 817c74e43de576a50de748c960e67735d3720b4e[m
+Merge: 3591442 4d2d647
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 14:38:11 2022 +0000
+
+    Merge branch 'abba' of https://github.com/BalloIbrahima/ErpOdkMobile into ballo
+
+[33mcommit 3591442549eb62855ce5f0a0d4ae1bf26ef95026[m
+Merge: f8f9553 f3914df
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 14:38:06 2022 +0000
+
+    add sale
+
+[33mcommit 4d2d6470bd91f1558ec19492ceea4a822f279c66[m
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Sep 25 14:32:56 2022 +0000
+
+    modification de salle
+
+[33mcommit f3914dfd3553bf2147d127043d22d52e124f7ebe[m
+Merge: 8738aa1 975a9b0
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sun Sep 25 14:09:11 2022 +0000
+
+    ajout de salle
+
+[33mcommit f8f955306d51bafe60d570117321b15db864a02e[m
+Merge: bdd3435 f13216c
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 13:15:40 2022 +0000
+
+    apres merge  fc 25/09 1315
+
+[33mcommit bdd3435ce8f646ef31deda24170810466f14022a[m
+Merge: b8b5a6d 989ab6f
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sun Sep 25 12:25:04 2022 +0000
+
+    apres merge sy
+
+[33mcommit 0e5015579609386d196f9f0bd085e4c06607dc8e[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sun Sep 25 07:04:53 2022 +0000
+
+    add time
+
+[33mcommit 989ab6fec681756e9cafe45f36a6b4b4be3b1d0f[m
+Author: Abdoulaye Sy <doulsy2021@gmail.com>
+Date:   Sun Sep 25 02:02:42 2022 +0000
+
+    Partie creation activité
+
+[33mcommit b8b5a6dd8badb41e70eed648ecbcb6e309733278[m
+Merge: 734b706 8738aa1
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sat Sep 24 23:15:51 2022 +0000
+
+    compilation abasse moi
+
+[33mcommit 18eb7e838b93970bdbb69c0f39e1ac303bd731fe[m[33m ([m[1;31morigin/aoua[m[33m)[m
+Merge: 97dc139 1348a86
+Author: attraore <taoua1986@gmail.com>
+Date:   Sat Sep 24 22:03:04 2022 +0000
+
+    responsive
+
+[33mcommit 734b706fbb6efccaf12a42551d26ede7369b5c25[m
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sat Sep 24 21:20:14 2022 +0000
+
+    avant merge abba
+
+[33mcommit d5cdc6c5adab07327a71b431f2b572655c6c47f3[m
+Merge: 0a9d715 d065b06
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sat Sep 24 21:16:05 2022 +0000
+
+    commit 2116
+
+[33mcommit 8738aa1d1190c051622e9788a5d547c715b80c74[m
+Merge: 28ac6ed d065b06
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sat Sep 24 20:49:21 2022 +0000
+
+    liaison back accueil
+
+[33mcommit d02e93a64f74527250d77d7e725d0d7eebdfcf91[m
+Merge: fee7613 1348a86
+Author: Abdoulaye Sy <doulsy2021@gmail.com>
+Date:   Sat Sep 24 20:41:28 2022 +0000
+
+    Merge branch 'idrissa' of https://github.com/BalloIbrahima/ErpOdkMobile into sy
+
+[33mcommit fee761365ed6b5cef0233d34d1aae2207307124b[m
+Author: Abdoulaye Sy <doulsy2021@gmail.com>
+Date:   Sat Sep 24 20:18:17 2022 +0000
+
+    Creation d'activité
+
+[33mcommit 975a9b04341b54f515b000686cfce73da0533e41[m[33m ([m[1;31morigin/Diallo[m[33m)[m
+Merge: 29fd2dc 1348a86
+Author: dadiallo <d.abdoulayead28@gmail.com>
+Date:   Sat Sep 24 20:10:46 2022 +0000
+
+    Ajout des pages creer  salle et modifie salle
+
+[33mcommit 8feb8843bd2a1cee3ffaf0a67831623cdfeb1503[m[33m ([m[1;31morigin/bore[m[33m)[m
+Author: sbore669 <107039494+sbore669@users.noreply.github.com>
+Date:   Sat Sep 24 19:59:09 2022 +0000
+
+    bore push
+
+[33mcommit 0a9d715b6bfb2dd39ec29fcc5ae0c26ef368f52e[m
+Merge: 863b792 38a4c4a
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sat Sep 24 19:41:34 2022 +0000
+
+    avant pull rimka
+
+[33mcommit 4ca5dfc6231f0ccf19bf120c4f03ea73787a6195[m
+Merge: 5af1299 1348a86
+Author: Dmchez33 <iddembele206@gmail.com>
+Date:   Sat Sep 24 19:39:59 2022 +0000
+
+    Merge branch 'idrissa' of https://github.com/BalloIbrahima/ErpOdkMobile into idrissa
+    
+     Conflicts:
+    	PlatformErpOdc/package-lock.json
+
+[33mcommit 5af12999dda92b84f883d50e817b8a54293531b8[m
+Author: Dmchez33 <iddembele206@gmail.com>
+Date:   Sat Sep 24 19:38:34 2022 +0000
+
+    creation de sidebar
+
+[33mcommit 28ac6edef44aeca4bdd1655c5692d5cc54728545[m
+Merge: e94ba20 1348a86
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sat Sep 24 19:08:15 2022 +0000
+
+    ajout entite
+
+[33mcommit f13216c2917dbab339d5b690bb6a16e37cc05850[m
+Merge: be3d882 1348a86
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Sat Sep 24 18:35:11 2022 +0000
+
+    Salle  Page 2
+
+[33mcommit d57b1b7765916805e981f8f2d9c5984d2eb0341d[m[33m ([m[1;31morigin/Rokiatou[m[33m)[m
+Merge: 7f580c9 1348a86
+Author: RouqoyatouK <rokiatoukanoute344@gmail.com>
+Date:   Sat Sep 24 18:34:06 2022 +0000
+
+    interface tirage
+
+[33mcommit cd1fe23a5dbd7956e37c961c280fd2f3b9d6a131[m
+Author: Kalifa SENOU <kalifasenou10@gmail.com>
+Date:   Sat Sep 24 18:28:00 2022 +0000
+
+    allactivity page
+
+[33mcommit d065b062902f787d526f32a568a1526b1f5fb9b8[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sat Sep 24 18:22:35 2022 +0000
+
+    version betta2 accueil
+
+[33mcommit d1f4d0ea061dc6f60e4658fef6300d4118918ec5[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sat Sep 24 18:16:28 2022 +0000
+
+    version betta de la page d'accueil
+
+[33mcommit 29fd2dc530e9fb96d93ef8cdaa95a56326766313[m
+Author: dadiallo <d.abdoulayead28@gmail.com>
+Date:   Sat Sep 24 17:29:10 2022 +0000
+
+    Ajout de page ajout utilisateur
+
+[33mcommit be3d882ea2790bcc2edaa11e6b097c29fe1aec78[m
+Merge: 853e4cc 863b792
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Sat Sep 24 16:49:24 2022 +0000
+
+    Salle  Page +1
+
+[33mcommit 853e4cc63d4beb7921e3315a2ab5f1cf50322023[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Sat Sep 24 16:30:02 2022 +0000
+
+    Salle  Page
+
+[33mcommit 97dc139ee5c7ac4ddad115fca87fc84ea21ecbf9[m
+Author: attraore <taoua1986@gmail.com>
+Date:   Sat Sep 24 16:22:35 2022 +0000
+
+    first commit
+
+[33mcommit e94ba2039743bc968b28f4268f952b655e75b7f9[m
+Author: RootAba <abassemaiga403@gmail.com>
+Date:   Sat Sep 24 15:55:29 2022 +0000
+
+     page ajout entite
+
+[33mcommit 863b7927dda4343f7ae074dd7b4363866d1d1bf8[m
+Author: Ibrahima BALLO <ibrahimaballo01@gmail.com>
+Date:   Sat Sep 24 13:55:13 2022 +0000
+
+    login lie a la database
+
+[33mcommit 38a4c4a4e30457fc9e76a27925eddbc91d520cac[m[33m ([m[1;31morigin/fc[m[33m)[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Sat Sep 24 13:53:49 2022 +0000
+
+    login version1
+
+[33mcommit 7f580c95692de0514b4cc3b2e850854f69112784[m
+Author: RouqoyatouK <rokiatoukanoute344@gmail.com>
+Date:   Sat Sep 24 13:33:33 2022 +0000
+
+    premier commit
+
+[33mcommit 083fdd65bcdebc0439ee4f4a94968ae33291624d[m
+Merge: 2b1c968 1348a86
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sat Sep 24 13:33:10 2022 +0000
+
+    merge branch of idrissa , in this branch it  has sideBar code
+
+[33mcommit 2b1c9680331f3f9ca1c2e769fa4635ad535369a9[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sat Sep 24 12:58:25 2022 +0000
+
+    create page home and branch karim
+
+[33mcommit 1348a8664351b04b2d9d57c203fcb6a5da24f1c8[m[33m ([m[1;31morigin/idrissa[m[33m)[m
+Author: Idrissa Dembélé <iddembele206@gmail.com>
+Date:   Sat Sep 24 12:24:09 2022 +0000
+
+    Creation de la page Accueil
+
+[33mcommit c0bdaf6fe8cb9b28d660e2fd818cae868b3a423f[m
+Author: kdiawara96 <karimdiawara96@gmail.com>
+Date:   Sat Sep 24 07:59:30 2022 +0000
+
+    create home page and branch Karim
+
+[33mcommit 87b509d82c1034dbdc6f3eefd419431bbbd6998d[m
+Author: Kalifa SENOU <kalifasenou10@gmail.com>
+Date:   Fri Sep 23 22:43:55 2022 +0000
+
+    1er commit
+
+[33mcommit d51c36c7e1746606f245f609b2459cc164f53311[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Fri Sep 23 19:21:44 2022 +0000
+
+    initialisation Login Page
+
+[33mcommit 4d90fcb2e3e00f8736443761b5aa1acdc5884e40[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/JEAN[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: fccoulibaly <fatoumatacoulibaly4155@gmail.com>
+Date:   Fri Sep 23 14:40:16 2022 +0000
+
+    initialisation du projet

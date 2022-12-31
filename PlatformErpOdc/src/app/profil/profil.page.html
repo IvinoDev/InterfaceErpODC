@@ -1,0 +1,208 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Profil</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <form>
+<div class="container">
+
+
+<div class="row first_row">
+
+
+<div class="col- col-sm- col-md-4 col-lg-2 col-xl-4 col-xxl-4  ">
+
+
+<div class="col">
+
+  <img *ngIf="utilisateurencours.image!=null" id="user"src={{utilisateurencours.image}} alt="image de l'utilisateur">
+  <img *ngIf="utilisateurencours.image==null" id="user"src="assets\avatar.png" alt="image de l'utilisateur">
+
+</div>
+
+<div class="col">
+
+  <div class="input mb-3">
+    <label for="exampleInputNom" class="form-label">Nom*</label>
+    <input type="text" value={{utilisateurencours.nom}} class="form-control" id="exampleInputNom">
+
+  </div>
+
+  <div class="input mb-3 form1">
+    <label for="exampleInputNom" class="form-label">Prenom*</label>
+    <input type="text" value={{utilisateurencours.prenom}} class="form-control" id="exampleInputNom">
+
+  </div>
+
+  <div class="input mb-3 form1">
+    <label for="exampleInputNom" class="form-label">Nom de l'entité*</label>
+    <input type="text" value={{utilisateurencours.monEntite}} class="form-control" id="exampleInputNom">
+
+  </div>
+
+  <div class="input mb-3 form1">
+
+    <label for="exampleInputNom" class="form-label">Responsable de l'entité*</label>
+    <input type="text" value="Hamadoun Kaou Diallo" class="form-control" id="exampleInputNom">
+
+  </div>
+
+
+
+</div>
+
+
+
+
+</div>
+
+
+<div class="col- col-sm- col-md-4 col-lg-2 col-xl-4 col-xxl-4 col_right">
+  <p class="gvNotifications">Gerer vos notifications</p>
+
+
+<!--
+  <div class="notification">Activité créée
+    <div class="row">
+      <div class="col "><i class="bi bi-toggle-off"></i>  <i class="bi bi-toggle-on"></i>
+      </div>
+      <div class="col icon_mail">par mail </div>
+    </div>
+  </div>
+
+
+
+  <div class="notification">Entité créée
+    <div class="row">
+      <div class="col "><i class="bi bi-toggle-off"></i>  <i class="bi bi-toggle-on"></i>
+      </div>
+      <div class="col icon_mail">par mail </div>
+    </div>
+  </div>
+
+
+
+
+  <div class="notification">Activité modifiée
+    <div class="row">
+      <div class="col "><i class="bi bi-toggle-off"></i>  <i class="bi bi-toggle-on"></i>
+      </div>
+      <div class="col icon_mail">par mail </div>
+    </div>
+  </div> -->
+
+
+
+
+  <div class="notification">Activité créée
+    <div class="row iconLabel">
+
+      <div class="col"> <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+      </div>
+      <div class="col icon_mail">par mail </div>
+    </div>
+  </div>
+
+
+
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+
+
+<div class="col- col-sm- col-md-4 col-lg-4 col-xl-4 col-xxl-4"></div>
+
+</div>
+
+<div class="row">
+<div class="col m-2 informerUser" >
+  Pour changer le mot de passe, tapez votre mot de passe actuel.
+
+</div>
+</div>
+
+
+<div class="row second_row">
+
+
+  <div class="col- col-sm- col-md-4 col-lg-4 col-xl-4 col-xxl-4 ff_col">
+        <div class="input mb-3">
+            <label for="exampleInputNom" class="form-label">Mot de passe actuel</label>
+            <input type="text" class="form-control" id="exampleInputNom" >
+      </div>
+  </div>
+
+  <div class="col- col-sm- col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+
+    <div class="input mb-3">
+      <label for="exampleInputNom" class="form-label">Nouveau mot de passe </label>
+      <input type="text" class="form-control" id="exampleInputNom">
+</div>
+
+  </div>
+
+
+  <div class="col- col-sm- col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+
+    <div class="input mb-3">
+      <label for="exampleInputNom" class="form-label">Confirmer mot de passe </label>
+      <input type="text" class="form-control" id="exampleInputNom">
+</div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="row  ">
+
+<div class="col-lg-12 col-12 ">
+  <div class=" d-grid d-md-flex gap-2 justify-content-md-end bbtn">
+ <button type="button" class="btn bouton">Annuler</button>
+<button type="button" class="btn bouton">Enregistrer</button>
+  </div>
+  <!-- <button class="btn btn-primary bouton" type="reset"> Annuler</button>
+  <button class="btn btn-primary bouton" type="submit">Enregistrer</button> -->
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</form>
+
+</ion-content>

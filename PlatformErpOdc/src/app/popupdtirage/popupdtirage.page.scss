@@ -1,0 +1,86 @@
+td{
+  font-family: myfon2;
+}
+th{
+  font-family: myfon2;
+  color: #ffff !important;
+    font-weight: 600;
+}
+thead{
+  background-color: #FF7900;
+}
+.voirPlus{
+  background-color: #FF7900;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  color: #ffff;
+}
+//Style de la pagination
+.paginat {
+  margin-left: 40%;
+}
+//Style du titre
+ion-title {
+  color: #FF7900;
+  font-weight: bold;
+}
+//Style du div du bouton
+.button {
+  height: 45px;
+  margin: 45px 10px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+@media screen and (max-width: 900px) {
+  .form-select{
+    font-size: medium;
+  }
+  .buttonColor{
+    font-size: medium;
+    text-align: center;
+  }
+  .hideColonneOder{
+    display: none;
+  }
+  th{
+    font-size: medium;
+
+  }
+  td{
+    font-size: small;
+  }
+
+}
+//style des boutons
+.but {
+  border-radius: 15px;
+  padding: 8px;
+  background-color: #FF7900;
+  color: #FFF;
+  border: #FF7900 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.but:hover {
+  background: #FFF;
+  color: #FF7900;
+}
+@media screen and (max-width: 450px) {
+  .buttonColor{
+    font-size: small;
+  }
+  .hideColonne{
+    display: none;
+  }
+  th{
+    font-size: medium;
+  }
+  td{
+    font-size: small;
+  }
+
+}

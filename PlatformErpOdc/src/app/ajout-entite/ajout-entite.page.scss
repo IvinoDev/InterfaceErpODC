@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 0;
+  background-color: aqua;
+
+}
+.userbox{
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  border-radius: 15px 15px 0px 0px;
+  text-align: center;
+}
+.userbox .title{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background-color: #FB5607;
+  color: #fff;
+
+} 
+.userbox form{
+  display: flex;
+  flex-wrap: wrap;
+}
+form .inputbox{
+  margin: 20px 20px 12px 0;
+  width: calc(100%/2 - 20px);
+
+}
+
+.inputbox input{
+  border: none;
+  border-bottom: 2px solid #000;
+  outline: none;
+  height: 40px;
+
+}
+
+.userbox .card-heading {
+  padding: 20px 0;
+  background: #FB5607;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
+}
+h2 {
+  justify-content: center;
+}
+.button{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-bottom: 10px;
+}
+.button-left,.button-right {
+  border: 2px solid black;
+  background-color: white;
+  color: black;
+  padding: 14px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-color: #FF6200;
+  border-radius: 25px;
+  display: flex;
+  margin-left: auto;
+  margin-right: 80px;
+  margin-top: 6%;
+  justify-content: flex-end;
+
+
+
+}
+
+@media only screen and (max-width:706px){
+
+   form{
+   
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  form .button{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    // background-color: #FB5607;
+
+  } 
+  button{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-bottom: 10px;
+  }
+  .button-left,.button-right {
+    // border: 2px solid black;
+    // background-color: #FF6200;
+    color: black;
+    // padding: 14px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    // border-color: #FF6200;
+    // border-radius: 25px;
+    // display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6%;
+    // justify-content: flex-end;
+  
+  
+  
+  }
+  userbox{
+    padding: 20px;
+  }
+
+
+}

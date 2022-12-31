@@ -1,0 +1,60 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="11">
+          <ion-title class="ion-align-self-start">notification</ion-title>
+        </ion-col>
+        <ion-col size="1">
+          <ion-title  class="ion-align-sef-end"><div class="col"><i class="fa-regular fa-bell"></i></div></ion-title>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Modifier salle</ion-title>
+    <ion-button slot="end" fill="clear">
+            <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<ion-content>
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col">Désignation</th>
+        <th scope="col">Réalisateur</th>
+        <th scope="col" class="hideColonne hideColonneOder">Lieu</th>
+        <th scope="col">Statut</th>
+        <th scope="col" class="hideColonne hideColonneOder">Date début</th>
+        <th scope="col" class="hideColonne">Date fin</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let table of students | paginate: { itemsPerPage: 5, currentPage: pages}">
+        <td> {{table.Designation}} </td>
+        <td> {{table.Realisateur}} </td>
+        <td class="hideColonne hideColonneOder"> {{table.Lieu}} </td>
+        <td> {{table.Statut}} </td>
+        <td class="hideColonne hideColonneOder"> {{table.Dated}} </td>
+        <td class="hideColonne">{{table.Datef}}</td>
+      </tr>
+      <pagination-controls (pageChange)=" pages = $event"> </pagination-controls>
+    </tbody>
+
+  </table>
+</ion-content>

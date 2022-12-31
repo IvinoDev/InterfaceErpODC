@@ -1,0 +1,175 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Créer activité</ion-title>
+    <!-- <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button> -->
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="container" id="mere">
+    <form (ngSubmit)="CreerActivite()" autocomplete="off" >
+
+      <div class="box">
+        <h1>Nouvelle Activité</h1>
+
+        <!-- <div class="alert alert-danger" role="alert" *ngIf="alertFalse">
+          <i class="fa fa-ban" aria-hidden="true" style="color: red;"></i>  Erreur survenue l'or de la création de l'activité
+        </div> -->
+
+        <div class="alert alert-success" role="alert" *ngIf="alertTrue">
+          <i class="fa fa-check-circle-o" aria-hidden="true" style="color: green;"></i>  Activité créée avec succès.
+
+        </div>
+
+        <div class="alert alert-danger" role="alert" *ngIf="alertNomTrue">
+          <i class="fa fa-ban" aria-hidden="true" style="color: red;"></i>{{messageerror}}
+        </div>
+        <div class="activite-details">
+          <div class="input-box mb-3">
+            <span class="details">Entité *</span>
+
+            <select name="typeentite" [(ngModel)]="typeentite" class="form-select" required>
+              <option>Choisisez une entité</option>
+              <option *ngFor="let entite of Entites">{{entite.libelleentite}}</option>
+              <!--pour recuperer l'id de lentite<option *ngFor="let entite of Entites" >{{entite.id}}</option> -->
+
+            </select>
+          </div>
+
+
+          <div class="input-box mb-3">
+            <Label for="inputs" >Titre Activité *</Label>
+            <input type="text" [(ngModel)]="nomActivite"  id="inputs" name="nomActivite" placeholder="Nom de l'activité" class="form-control" autocomplete="off"  required>
+          </div>
+
+          <div class="input-box mb-3">
+            <Label for="inputs" >Type d'activité *</Label>
+            <select name="typeactivite" id="inputs" [(ngModel)]="typeactivite" class="form-select" required>
+                <option>Choisir le type de  l'activité</option>
+              <option *ngFor="let type of TypesActivites">{{type.libelle}}</option>
+            </select>
+          </div>
+
+
+          <div class="input-box mb-3">
+            <span class="details">Lead Activité *</span>
+            <select name="leadNomPrenom" [(ngModel)]="leadNomPrenom" class="form-select" required>
+              <option>Choisir un lead *</option>
+              <option *ngFor="let user of PersonnelsActives">{{user.nom}} {{user.prenom}}</option>
+
+            </select>
+          </div>
+
+          <!-- <div class="input-box mb-3">
+            <span class="details">Date debut *</span>
+            <input name="datedebut" [(ngModel)]="datedebut" type="datetime-local" required />
+          </div> -->
+
+    <div class="input-box mb-3">
+      <label for="inputs" class="form-label"> Date début *</label>
+      <input type="date" id="inputs" class="form-control" name="datedebut"  [(ngModel)]="datedebut"  required>
+    </div>
+
+    <div class="input-box mb-3">
+      <label for="inputs" class="form-label"> Date fin *</label>
+      <input type="date" id="inputs" class="form-control" name="dateFin"  [(ngModel)]="dateFin"  required>
+    </div>
+
+
+
+          <!-- <div class="input-box mb-3">
+
+            <span class="details">Date fin *</span>
+            <input type="datetime-local" name="dateFin" [(ngModel)]="dateFin" class="form-control" required />
+          </div> -->
+
+
+
+          <!-- <div class="input-box">
+                      <span class="details">Formateurs </span>
+                      <select name="utilisateurs" [(ngModel)]="utilisateurs" class="select" >
+                        <option selected>Choisir des formateurs</option>
+                      <option   *ngFor="let u of utilisateurs">{{u.nom}}  {{u.prenom}}</option>
+
+                      </select>
+                  </div> -->
+          <div class="input-box">
+            <span class="details">Formateurs </span>
+            <ion-list>
+              <ion-item>
+                <ion-select placeholder="Selectionner les formateurs" [multiple]="true" [(ngModel)]="FormateursInternes"  name="FormateursInternes">
+                  <ion-select-option *ngFor="let u of utilisateurs">{{u.nom}} {{u.prenom}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+          </div>
+
+          <div class="input-box">
+            <span class="details">Formateurs Externes</span>
+            <ion-list>
+              <ion-item>
+                <ion-select placeholder="Selectionner les formateurs" [multiple]="true" [(ngModel)]="FormateursExternes" name="FormateursExternes">
+                  <ion-select-option *ngFor="let u of externes">{{u.nom}} {{u.prenom}}</ion-select-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+
+          </div>
+
+
+          <!-- <div class="input-box">
+            <span class="details">Salle </span>
+            <select name="libellesalle" [(ngModel)]="libellesalle" class="select">
+                <option>Choisir une salle</option>
+              <option *ngFor="let s of SallesDisponibles">{{s.libelle}}</option>
+            </select>
+          </div> -->
+
+
+        <div class="input-box mb-3">
+             <label for="inputs" class="form-label">
+              Salle
+             </label>
+            <select name="libellesalle"  [(ngModel)]="libellesalle"  class="form-select" aria-label="Default select exemple"  reqiuired>
+              <option>Choisir une salle *</option>
+              <option *ngFor="let s of SallesDisponibles">{{s.libelle}}</option>
+           </select>
+        </div>
+
+
+
+
+
+
+          <div class="input-box">
+            <Label >Ajouter image *</Label>
+            <input type="file" [(ngModel)]="image" placeholder="Logo.jpg" id="logo" name="file" class="form-control"
+              (change)="selectFile($event)" accept="image/png, image/jpeg, image/jpg" required />
+          </div>
+          <div class="input-box">
+            <span > Description   *</span>
+            <textarea class="form-control" name="description" [(ngModel)]="description" id="details"
+              placeholder="Donner une description de l'activité"></textarea>
+          </div>
+
+        </div>
+      </div>
+      <div class="button">
+        <input class="but" type="submit" value="Enregistrer">
+      </div>
+    </form>
+
+  </div>
+
+</ion-content>

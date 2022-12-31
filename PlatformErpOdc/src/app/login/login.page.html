@@ -1,0 +1,41 @@
+<!-- <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Log In</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+<ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "medium" color = "#fff" type = "ball-scale-multiple" [fullScreen] = "true"><p style="color: white" > Veuillez patientez ... </p></ngx-spinner>
+<ion-content>
+  <div class="header" >
+    <div class="image">
+      <img  src="../../assets/icon/Orange.png" alt="logoooo">
+    </div>
+
+    <div class="monform">
+      <div class="imgsmall">
+        <img src="../../assets/icon/Orange.png" alt="logo">
+      </div>
+      <p> <b >Connexion</b></p>
+      <form id="login" #f="ngForm" (ngSubmit)="logForm()">
+        <ion-label id="erreur" *ngIf="error">{{erreur}}</ion-label>
+        <div class="mb-3">
+          <!-- <label for="exampleInputEmail1" class="form-label">Entrer votre nom d'utilisateur </label> -->
+          <ion-input type="email" class="form-control" [(ngModel)]="login" name="login" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Pseudo" ngModel required></ion-input>
+        </div>
+        <div class="mb-3">
+          <!-- <label for="exampleInputPassword1" class="form-label">Entrer votre Mot de passe</label> -->
+          <ion-input type="password" class="form-control" [(ngModel)]="password" name="password" id="exampleInputPassword1" placeholder="Mot de passe" ngModel required></ion-input>
+        </div>
+        <button type="submit" id="btnn" class="btn" [disabled]="f.form.invalid" style="background-color: #FF7900;">Se connecter</button>
+
+        <a class="lienPass" routerLink="/forgotpassword1"  style="color: #FFF;">Mot de passe oublié !</a>
+      </form>
+    </div>
+
+  </div>
+
+
+</ion-content>
+

@@ -1,0 +1,128 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Créer Salle</ion-title>
+      <ion-button slot="end" fill="clear">
+        <app-cloche></app-cloche>
+
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content>
+
+
+
+
+    <div class="container">
+        <form #f="ngForm">
+          <!-- <div style="background-color: #FFD1C9; height: 45px; width: 80%; margin-left: auto; margin-right: auto;">
+            <i class="fa fa-ban" aria-hidden="true"></i>
+          </div> -->
+
+          <div class="alert alert-danger" role="alert" *ngIf="alertFalse">
+            <i class="fa fa-ban" aria-hidden="true" style="color: red;"></i>  Erreur survenue l'or de la création de la salle
+          </div>
+
+          <div class="alert alert-success" role="alert" *ngIf="alertTrue">
+            <i class="fa fa-check-circle-o" aria-hidden="true" style="color: green;"></i>  Salle créée avec succès.
+
+          </div>
+
+          <div class="alert alert-danger" role="alert" *ngIf="alertNomTrue">
+            <i class="fa fa-ban" aria-hidden="true" style="color: red;"></i>{{messageerror}}
+          </div>
+
+
+
+
+          <div class="row" >
+
+               <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6" >
+
+                <div class="input mb-3">
+                    <label for="inputs" class="form-label">Nom *</label>
+                    <input  id="inputs"  [(ngModel)]="nom" name="nom" type="text"  class="form-control" id="inputs" ngModel required>
+                  </div>
+
+
+                  <div class="input mb-3">
+                    <label for="inputs" class="form-label">Niveau *</label>
+                    <input id="inputs" [(ngModel)]="niveau" name="niveau" type="number"  class="form-control" id="inputs" min="0" max="4" ngModel required>
+                  </div>
+
+
+
+                  <div class="input mb-3">
+                    <label for="inputs" class="form-label">Nombre de place *</label>
+                    <input  id="inputs" [(ngModel)]="nombrePlace" name="nombrePlace" type="number"  class="form-control" id="inputs" min="1" max="100" ngModel required>
+                  </div>
+<!--
+                  <div class="input mb-3">
+                    <label for="inputs" class="form-label">Entité *</label>
+                     <select  id="inputs" class="form-select" aria-label="Default select example">
+                         <option selected >Choisisez une entité</option>
+                        <option *ngFor="let entite of Entites" >{{entite.libelleentite  }}</option>
+
+                      </select>
+                     </div> -->
+
+
+
+
+
+
+                <!-- <div class="col">
+
+                    <label>Entité *</label>
+                        <select id="inputs" [(ngModel)]="entiteNom"  name="entiteNom" class="select" required>
+                            <option >Choisisez une entité</option>
+                            <option *ngFor="let entite of Entites" >{{entite.libelleentite  }}</option>
+                        </select>
+                </div> -->
+
+
+
+
+
+
+
+
+
+                </div>
+
+
+                <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6" >
+
+                    <label for="descriptiontextarea">Description</label>
+                    <div class="form-floating" style="height: 95%;">
+                                <textarea class="form-control"  [(ngModel)]="description" name="description" placeholder="Description" id="descriptiontextarea"></textarea>
+                      </div>
+
+                </div>
+
+                <div class="col button_div" >
+
+
+
+                        <button type="button" (click)="CreerSalle()" class="btn bouton">Enregistrer</button>
+                        <!--  [disabled]="f.form.invalid" -->
+
+
+
+                </div>
+
+              </div>
+        </form>
+
+
+
+
+    </div>
+
+</ion-content>

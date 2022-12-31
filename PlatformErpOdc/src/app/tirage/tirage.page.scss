@@ -1,0 +1,175 @@
+
+
+@font-face {
+  font-family: myfon2;
+  src: url('../../assets/font/Poppins-Light.ttf');
+}
+
+img{
+  height: 80%;
+  width: 100%;
+}
+  @media (max-width: 768px) {
+
+}
+
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background: #fff;
+  margin-top:3%;
+  // height: 80%;
+  // margin: auto;
+  box-shadow: 0px 6px 4px 6px rgba(0, 0, 0, 0.10);
+}
+
+#inputs{
+  box-shadow: none;
+  outline:none;
+}
+label{
+font-family: myfon2;
+color:#FF7900 ;
+}
+
+.bouton{
+  background-color: #FF7900;
+ 
+  border: none;
+  font-weight: bold;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 100%;
+  color: #fff;
+margin-left: auto;
+margin-right: auto;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+}
+
+
+
+// /*le cadre principal*/
+// .principal{
+//   position: relative;
+//   width: 350px;
+//   height: 600px;
+//   border-radius: 20px;
+//   margin-top: 10px;
+//   margin-right: auto;
+//   margin-left: auto;
+//   padding: 40px;
+//   padding-top: 50px;
+//   box-sizing: border-box;
+//   background: white;
+//   box-shadow: 10px 10px 10px  gray, -10px -10px 10px gray;
+// }
+
+
+
+// /*le rond du tirage*/
+// .brand-logo {
+//   height: 120px;
+//   width: 300px;
+//   margin-left: -15px;
+//   border-radius: 50%;
+//   box-sizing: border-box;
+//   box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+// }
+
+// /*titre*/
+// .title {
+//   margin-top: 0px;
+//   font-weight: 900;
+//   font-size: 1.2rem;
+//   color: black;
+//   letter-spacing: 1px;
+//   text-align: center;
+// }
+
+// /* label*/
+// label{
+//   color: orangered;
+// }
+
+// /*input*/
+// #inputs{
+
+//   background-color: #F8FAFC;
+//   color: black;
+//   border: 1px solid #B8BCCA ;
+//   padding: 8px 80px 8px 0px;
+//   border-radius: 5px;
+// }
+// #inputs:invalid{
+//   animation: shake .3s;
+// }
+// @keyframes shake {
+//   25% { transform: translateX(4px);}
+//   50% { transform: translateX(-4px);}
+//   75% { transform: translateX(4px);}
+  
+// }
+
+
+// /*select*/
+
+// #select{
+//   background-color: #F8FAFC;
+//   color: black;
+//   border: 1px solid #B8BCCA ;
+//   padding: 12px 178px 12px 0px;
+//   border-radius: 5px;
+// }
+// /*button*/
+// button{
+
+//   color: white;
+//   margin-top: auto;
+//   background: #FF7900;
+//   height: 40px;
+//   border-radius: 5px;
+//   cursor: pointer;
+//   font-weight: 900;
+//   box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+//   transition: 0.5s;
+//    border: 2px solid #FF7900;
+//    padding: 0px 100px 0px 0px;
+//    margin-left: 50px;
+//   width: 60%;
+//   padding: 0;
+//   border-radius: 20px;
+
+// }
+
+// button:hover {
+//  background-color: white;
+//  color: black;
+//  border: 1px solid #FF7900;
+
+// }
+
+
+
+// @media (max-width: 584px) {
+//   .container {
+//       max-width: 100%;
+//   }
+//   form .row .col {
+//       margin-bottom: 15px;
+//       width: 100%;
+//   }
+//   ion-title #notif{
+//     width: 100%;
+//   }
+//   .container form .row col {
+//       max-height: 300px;
+//       overflow-y: scroll;
+//   }
+//   .row .col::-webkit-scrollbar {
+//       width: 0;
+//   }
+// }

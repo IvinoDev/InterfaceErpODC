@@ -1,0 +1,184 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Detail activités</ion-title>
+      <ion-button slot="end" fill="clear">
+        <app-cloche></app-cloche>
+
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content>
+
+    <div class="row laLigne mx-3 my-3">
+        <div class="col-lg-5 col-12 text-center">
+            <img class="img mt-1" src="{{image}}" alt="" id="image">
+
+        </div>
+        <div class="col-lg-6 col-12 colonne">
+            <div  class="item-native my-3">
+                <ion-label class="titre m-3">Créer par</ion-label>
+                <ion-label class="contenu">{{nomCreateur}} {{prenomCreateur}}</ion-label>
+            </div>
+            <div class="item-native my-3" >
+                <ion-label class="titre m-3">Titre</ion-label>
+                <ion-label class="contenu ml-5" slot="end">{{nom}} </ion-label>
+            </div>
+            <div class="item-native my-3">
+                <ion-label class="titre m-3">Status</ion-label>
+                <ion-label class="contenu">{{Status}}</ion-label>
+            </div>
+            <!-- <div class="item-native my-3">
+                <ion-label class="titre m-3">Durée</ion-label>
+                <ion-label class="contenu">Awesome Label</ion-label>
+            </div> -->
+            <div class="item-native my-3">
+                <ion-label class="titre m-3">Lead</ion-label>
+                <ion-label class="contenu">{{leadnom}}  {{leadprenom}}</ion-label>
+            </div>
+            <div class="item-native my-3">
+                <ion-label class="titre m-3">Salle</ion-label>
+                <ion-label *ngIf="salles!=null" class="contenu">{{salles}} </ion-label>
+                <button style="color:#FF7900" type="button" *ngIf="salles == null" [routerLink]="['/dashboard/salle']" > Associer une salle </button>
+              </div>
+            <div class="item-native my-3">
+              <ion-label class="titre m-3">Date début</ion-label>
+              <ion-label class="contenu">{{dateDebut  | date: 'dd MMMM yyyy à hh:mm'}}</ion-label>
+          </div>
+          <div class="item-native my-3">
+            <ion-label class="titre m-3">Date Fin</ion-label>
+            <ion-label class="contenu">{{dateFin | date: 'dd MMMM yyyy à hh:mm'}}</ion-label>
+        </div>
+        <div class="item-native my-3">
+          <ion-label class="titre m-3">Formateurs Internes</ion-label>
+          <ion-label class="contenu" *ngFor="let form of formateursInter">{{form.nom}} {{form.prenom}}</ion-label>
+      </div>
+
+      <div class="item-native my-3">
+        <ion-label class="titre m-3">Formateurs Externes</ion-label>
+        <ion-label class="contenu" *ngFor="let form of formateursExter">{{form.nom}} {{form.prenom}}</ion-label>
+    </div>
+        <div class="item-native my-3">
+          <ion-label class="titre m-3">Description</ion-label>
+          <ion-label class="contenu">{{description}}</ion-label>
+      </div>
+
+        </div>
+    </div>
+    <div>
+        <div class="row container">
+
+            <div class="col-lg-12 col-12">
+              <div class="d-grid m-2 gap-2 d-md-flex">
+                <button class="btn buttonColor largerButton" type="button" [routerLink]="['/dashboard/importer-participant',idact]"> Importer  liste Participant</button>
+                <button class="btn buttonColor largerButton" type="button" (click)="exportToExcel()"> Exporter liste</button>
+                <button class="btn buttonColor largerButton" type="button" [routerLink]="['/dashboard/ajoutparticipant',idact]" >+ &nbsp; Ajouter participant</button>
+                <button class="btn buttonColor largerButton" type="button" [routerLink]="['/dashboard/tachedesignation',idact]"> Tâche</button>
+                <button class="btn buttonColor largerButton" type="button"  (click)="succesImport()"> Supprimer</button>
+                <!-- <button class="btn buttonColor largerButton" type="button"  [routerLink]="['/dashboard/editactivity',idact]" > Editer</button> -->
+
+            </div>
+            </div>
+          </div>
+    </div>
+    <table class="table caption-top" id="season-tble" >
+      <caption>
+        <!-- <input type="number" [(ngModel)]="nombreLingne" /> -->
+
+        <!-- <button class="btn buttonColor largerButton" type="submit" (click)="envoyernombre()">Afficher toute la liste</button> -->
+      </caption>
+      <thead class="thead-dark">
+        <tr>
+          <!-- <th scope="col">Id</th> -->
+          <th scope="col">Nom</th>
+          <th scope="col">Prenom</th>
+          <th scope="col">email</th>
+          <th scope="col">Date de naissance</th>
+          <th scope="col">Genre</th>
+          <th scope="col">Numero</th>
+          <!-- <th scope="col">Action</th> -->
+
+        </tr>
+      </thead>
+      <tbody>
+        <!-- <tr>
+          <td>bonj</td>
+          <td>bonj</td>
+          <td>bonj</td>
+
+          <td>bonj</td>
+
+          <td>bonj</td>
+          <td><button (click)="successsuppost()" style="background-color: #FF7900; border-radius: 5px;" >  <i class="bi bi-trash"></i></button></td>
+
+
+        </tr> -->
+
+        <tr *ngFor="let p of postulants  | paginate: {itemsPerPage:nombreLingne1, currentPage: pages} ; let i= index">
+          <!-- <th scope="row">{{p.postulant.id}}</th> -->
+          <td>{{p.postulant.nom}}</td>
+          <td>{{p.postulant.prenom}}</td>
+          <td>{{p.postulant.email}}</td>
+          <td>{{p.postulant.dateNaissance | date: 'dd/MM/YYYY'}}</td>
+          <td>{{p.postulant.genre}}</td>
+          <td>{{p.postulant.numero}}</td>
+          <!-- <td><button (click)="successsuppost()" style="background-color: #FF7900; border-radius: 5px;" >  <i class="bi bi-trash"></i></button></td> -->
+        </tr>
+
+
+
+      </tbody>
+    </table>
+      <div class="position-relative">
+        <div class="position-absolute top-0 end-0 mt-4">
+          <pagination-controls previousLabel="Prev" nextLabel="Next"
+            (pageChange)=" pages = $event"> </pagination-controls>
+        </div>
+      </div>
+    <!-- <div class="liste">
+
+        <ion-grid class="ion-margin text-center tailleTexte">
+            <ion-row class="tableEntete ">
+                <ion-col>Nom</ion-col>
+                <ion-col>Prenom</ion-col>
+                <ion-col class="cacherCole">Genre</ion-col>
+                <ion-col>Contact</ion-col>
+                <ion-col class="cacherCole">Email</ion-col>
+                <ion-col>Presence</ion-col>
+            </ion-row>
+            <ion-row *ngFor="let student of students; index as i">
+
+                <ion-col>{{ student.name }}</ion-col>
+                <ion-col>{{ student.prenom }}</ion-col>
+                <ion-col class="cacherCole">{{ student.genre }}</ion-col>
+                <ion-col>{{student.contact}}</ion-col>
+                <ion-col class="cacherCole">{{ student.email }}</ion-col>
+                <ion-col>
+                    <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    <ion-icon name="close-circle-outline"></ion-icon>
+                </ion-col>
+
+            </ion-row>
+            <div class="position-relative">
+                <div class="position-absolute top-0 end-0 mt-4">
+                    <pagination-controls (pageChange)="a = $event" nextLabel="Suivants" previousLabel="Précédents">
+
+                    </pagination-controls>
+                </div>
+            </div> -->
+            <!-- <div class="pagibottom" style="margin-left: 200px;"></div> -->
+        <!-- </ion-grid>
+    </div> -->
+    <!-- <div class="4">
+        <button><a href="#" class="btn btn-primary btn-sm"
+                style="margin-top: 20px;background-color:#FF7900;">Supprimer</a> </button>
+    </div> -->
+
+</ion-content>

@@ -1,0 +1,264 @@
+.container{
+  display: grid;   
+  grid-template-columns: 80% 18%;
+  column-gap: 2%;
+ 
+  height: 100%;
+  background-color: #F2EDED;
+  
+}
+.gauche{
+  border-radius: 15px;
+  background-color: white;
+  padding: 1.5%;
+  height: 100%;
+  margin-top: 4%;
+}
+
+table{
+  margin-top: 2%;
+  background-color: white;
+}
+.droite{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  padding: 1.5%;
+  margin-top: 18%;
+  height: 100%;
+  
+}
+
+.labelContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  height: -webkit-fill-available;
+}
+img{
+  border-radius: 15px;
+ 
+}
+.gauche{
+  border-radius: 15px;
+  background-color: white;
+  padding: 1.5%;
+  height: 100%;
+  margin-top: 4%;
+}
+
+.gauche >table{
+  margin-top: 2%;
+  background-color: white;
+}
+.droite{
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  background-color: white;
+  padding: 1.5%;
+  margin-top: 18%;
+  height: 100%;
+  
+}
+.menuResponsive{
+  display: none;
+}
+
+.labelContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 26px;
+  font-weight: 500;
+  height: -webkit-fill-available;
+}
+img{
+  border-radius: 15px;
+ 
+}
+.droite >.libelleListe{
+  margin-top: 42%;
+
+}
+.droite >.dateImport{
+  margin-top: 42%;
+}
+
+.searchBar{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  
+}
+.InputSearch{
+  margin-top: 5px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 30% 65%;
+}
+.InputSearch >svg{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+.aucunT{
+  text-align: center;
+  font-size: x-large;
+  margin-top: 10%;
+  color: #FF7900;
+}
+.InputSearch > input{
+  border: 0;
+  font-size: 20px;
+  font-family: cursive;
+  background-color: #F3F3F3;
+}
+.InputSearch >input:focus {
+  border: 0;
+}
+td{
+  font-family: myfon2;
+}
+th{
+  font-family: myfon2;
+  color: #ffff !important;
+  font-weight: 600;
+}
+thead{
+  background-color: #FF7900;
+}
+.voirPlus{
+  color: #FF7900;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  .form-select{
+    font-size: medium;
+  }
+  .buttonColor{
+    font-size: medium;
+    text-align: center;
+  }
+  .hideColonneOder{
+    display: none;
+  }
+  th{
+    font-size: medium;
+
+  }
+  td{
+    font-size: small;
+  }
+
+  .InputSearch > input{
+    border: 0;
+    font-size: 15px;
+    font-family: cursive;
+  }
+
+  .menuResponsive{
+    display: flex;
+    right: 0px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 5px;
+    
+
+}
+.menuResponsive >.photo{
+  display: none;
+}
+.InputSearch {
+    margin-top: 10px;
+    width: auto !important; 
+    display: flex;
+    justify-content: center;
+    height: 30px;
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 30% 65%;
+}
+
+.droite{
+    display: none ;
+}
+
+.gauche{
+    padding: 20px;
+    height: 100%
+}
+
+.libelleListe{
+    border-right: solid;
+    border-color: #FF7900;
+    padding-right: 12px;    
+}
+
+.nbrePost{
+    padding-left: 12px;  
+    border-right: solid;
+    padding-right: 12px; 
+    border-color:  #FF7900;
+}
+
+.dateImport{
+    padding-left: 12px; 
+}
+
+.container{
+    display: block;
+    height: 85vh;
+}
+
+.listeList{
+    display: grid;
+    padding: 4%;
+    grid-template-columns: auto auto !important;
+    column-gap: 2%;
+    row-gap: 14px;
+}
+
+
+}
+@media screen and (max-width: 450px) {
+  .buttonColor{
+    font-size: small;
+  }
+  .hideColonne{
+    display: none;
+  }
+  th{
+    font-size: medium;
+  }
+  td{
+    font-size: small;
+  }
+
+  .labelContainer{
+    font-size: 15px;
+  }
+
+  .InputSearch > input{
+    border: 0;
+    font-size: 10px;
+    font-family: cursive;
+  }
+
+}

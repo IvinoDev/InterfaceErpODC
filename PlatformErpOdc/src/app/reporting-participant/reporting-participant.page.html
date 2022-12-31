@@ -1,0 +1,171 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Reporting participant</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="header">
+    <div class="headerContent">
+      <p>Liste des participants</p>
+      <button class="filtre" id="open-modal1">Filtre par</button>
+    </div>
+  </div>
+
+
+
+
+  <div class="mx-3">
+
+    <table class="table table-striped text-center mx-3">
+      <thead>
+        <tr>
+          <th scope="col">Activité</th>
+          <th scope="col">Date début</th>
+          <th scope="col" class="hideColonne hideColonneOder">Date fin</th>
+          <th scope="col">Nom</th>
+          <th scope="col" class="hideColonne hideColonneOder">Prenom</th>
+          <th scope="col">Email</th>
+          <th scope="col" class="hideColonne hideColonneOder">Date de naissance</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let participant of listeparticipants | paginate : { itemsPerPage:10, currentPage:a}">
+          <td>{{participant.activite.nom}}</td>
+          <td>{{participant.activite.dateDebut | date: 'dd/MM/yyyy'}}</td>
+          <td class="hideColonne hideColonneOder">{{participant.activite.dateFin | date: 'dd/MM/yyyy'}}</td>
+          <td>{{participant.postulant.nom}}</td>
+          <td class="hideColonne hideColonneOder">{{participant.postulant.prenom}}</td>
+          <td>{{participant.postulant.email}}</td>
+          <td class="hideColonne hideColonneOder">{{participant.postulant.dateNaissance| date: 'dd/MM/yyyy'}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="header">
+
+    <div class="headerContent">
+      <button class="filtre2" (click)="exportToExcel()"><i class="fa fa-download" aria-hidden="true"></i>
+        Télécharger
+      </button>
+    </div>
+  </div>
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="a = $event" nextLabel="Suivants" previousLabel="Précédents">
+    </pagination-controls>
+  </div>
+</ion-content>
+
+
+
+<!-- <table class="table table-striped text-center mx-3">
+    <thead>
+      <tr>
+        <th scope="col">Activité</th>
+        <th scope="col">Date début</th>
+        <th scope="col" class="hideColonne hideColonneOder">Date fin</th>
+        <th scope="col">Nom</th>
+        <th scope="col" class="hideColonne hideColonneOder">Prenom</th>
+        <th scope="col" class="hideColonne">Email</th>
+        <th scope="col" class="hideColonne">Date de naissance</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor=" let a of accueil | paginate:{itemsPerPage:8, currentPage:a}; let index = index" >
+        <tr>
+        <td>Kalanso 02</td>
+        <td> 12/02/2022	 </td>
+        <td class="hideColonne hideColonneOder">Encours</td>
+        <td> Jean </td>
+        <td class="hideColonne hideColonneOder">SAGARA</td>
+        <td class="hideColonne hideColonneOder">jeansagara272@gmail.com </td>
+        <td class="hideColonne hideColonneOder">02/10/1962 </td>
+      </tr>
+
+      <tr>
+        <td>Kalanso 02</td>
+        <td> 12/02/2022	 </td>
+        <td class="hideColonne hideColonneOder">Encours</td>
+        <td> Djiguiba </td>
+        <td class="hideColonne hideColonneOder">Barema</td>
+        <td class="hideColonne hideColonneOder">djiguiba2@gmail.com </td>
+        <td class="hideColonne hideColonneOder">21/04/1980 </td>
+      </tr>
+    </tbody>
+
+  </table> -->
+
+
+
+<div class="container">
+
+  <ion-modal trigger="open-modal1">
+    <ng-template>
+      <form action="#">
+        <div class="box">
+
+          <div class="soul">
+            <div class="col- col-sm- col-md-12 col-lg-12 col-xl-4 col-xxl-4 tout">
+              <div class="jean">
+                <div class="text">
+                  <p>Filtre activité</p>
+                </div>
+
+                <!-- Champ type activité -->
+                <div>
+                  <label for="inputs" class="form-label">Type d'activité *</label>
+                  <select class="form-select" aria-label="Default select example" required 
+                    [(ngModel)]="typeactivite"
+                    [ngModelOptions]="{standalone: true}">
+                    <option value="1">Selectionner activité</option>
+                    <option *ngFor="let ta of listetp">{{ta.libelle}}</option>
+                  </select>
+
+                </div>
+
+                <!-- Champ date début -->
+                <div class="input mb-3 form1">
+                  <label for="exampleInputNom" class="form-label">Date debut</label>
+                  <input placeholder="06/03/2022" type="date" class="form-control" id="InputCmdp"
+                    [(ngModel)]="datedebut" [ngModelOptions]="{standalone: true}">
+
+                </div>
+
+                <!-- Champ date fin -->
+                <div class="input mb-3 form1">
+                  <label for="exampleInputNom" class="form-label">Date fin</label>
+                  <input placeholder="06/10/2022" type="date" class="form-control" id="InputCmdp" [(ngModel)]="datefin"
+                    [ngModelOptions]="{standalone: true}">
+
+                </div>
+                <div class="row  ">
+
+                  <div class="col-lg-12 col-12 ">
+
+                    <button type="button" class="btn bouton" (click)="filtrerParticipant()">Enregistrer</button>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </form>
+    </ng-template>
+  </ion-modal>
+</div>
+

@@ -1,0 +1,8 @@
+{
+  "name": "ERP ODC",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

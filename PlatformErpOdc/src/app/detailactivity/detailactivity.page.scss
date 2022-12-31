@@ -1,0 +1,284 @@
+// .title {
+//     margin-bottom: 50px;
+//     text-transform: uppercase;
+// }
+
+// .card-block {
+//     font-size: 1em;
+//     position: relative;
+//     margin: 0;
+//     padding: 1em;
+//     border: none;
+//     border-top: 1px solid rgba(34, 36, 38, .1);
+//     box-shadow: none;
+// }
+
+// .card {
+//     font-size: 1em;
+//     overflow: hidden;
+//     padding: 5;
+//     border: none;
+//     border-radius: .28571429rem;
+//     background: #FFFFFF;
+//     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+//     margin-top: 20px;
+// }
+
+// .img {
+//     max-width: 100%;
+//     border: 0;
+//     margin-top: 22px;
+//     margin-left: 15px;
+//     border-radius: 10px;
+//     width: auto;
+//     height: 80%;
+// }
+
+// .btn {
+//     margin-top: auto;
+// }
+
+// ///////////////:::boutons
+// .mesbouton {
+//     display: flex;
+//     justify-content: space-around;
+//     border-radius: 15px;
+// }
+
+// ////////////////////////////////:Tableau
+
+// .tailleTexte {
+//     font-family: myfon1 !important;
+//     font-size: 18px !important;
+// }
+
+// .tableEntete {
+//     background-color: #FF6200;
+//     color: white;
+//     font-size: 22px;
+//     font-weight: bold;
+// }
+
+// @media screen and (max-width: 900px) {
+//     .tailleTexte {
+//         font-size: 12px;
+//     }
+// }
+
+// @media screen and (max-width: 800px) {
+//     .tailleTexte {
+//         font-size: 8px;
+//     }
+//     .cacherCole {
+//         display: none;
+//     }
+// }
+
+// .voir {
+//     background-color: #FF6200;
+//     color: white;
+//     font-weight: bold;
+//     font-size: 20px;
+//     border-radius: 15px;
+// }
+
+// ion-row:nth-child(-n+3) {
+//     margin-bottom: 1px;
+// }
+
+// ion-row {
+//     border: 1px solid black;
+// }
+
+// ion-row:nth-child(even) {
+//     background-color: #F3F3F3;
+// }
+//   /*button*/
+//   button{
+//     color: white;
+//     margin-top: 20px;
+//     background: #FF7900;
+//     height: 40px;
+//     //border-radius: 5px;
+//     cursor: pointer;
+//     font-weight: 900;
+//     box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+//     transition: 0.5s;
+//      border: 2px solid #FF7900;
+//      padding: 0px 100px 0px 0px;
+//      margin-left: 50px;
+//     padding: 0;
+//     border-radius: 20px;
+
+//   }
+@font-face {
+    font-family: myfon1;
+    src: url("../../assets/font/Poppins-Light.ttf");
+}
+ion-content{
+    font-family: myfon1 !important;
+}
+#image{
+  border-radius: 15px;
+  object-fit: fill;
+}
+.laLigne{
+    background-color: #ffff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important;
+}
+.img{
+    width: 100% !important;
+}
+ion-label{
+    background-color: #ffff !important;
+}
+.item-native{
+    background: #fff !important;
+}
+.titre{
+    font-size: 18px;
+    font-weight: bold;
+}
+.contenu{
+    font-size: 16px;
+    font-weight: lighter;
+    text-align: left;
+}
+@media screen and (max-width: 600px) {
+    .titre{
+        font-size: medium;
+        font-weight: bold;
+    }
+    .contenu{
+        font-size: smaller;
+        font-weight: lighter;
+    }
+
+}
+.largerButton{
+    width: 320px;
+}
+// style apppliquer au button horizontal
+@font-face {
+    font-family: myfon;
+    src: url("../../assets/font/Poppins-Black.ttf");
+  }
+
+  @font-face {
+    font-family: myfon2;
+    src: url("../../assets/font/Poppins-Light.ttf");
+  }
+  .form-select{
+    color: #FF7900;
+    border: 1px solid #FF7900;
+    border-radius: 15px;
+  }
+  .form-select:focus {
+    box-shadow: 0px 0px 0px;
+    font-family: myfon2;
+    color: #FF7900;
+  }
+
+  .buttonColor {
+    background-color: #FF7900;
+    color: #ffff;
+    font-family: myfon2;
+    border-radius: 15px;
+  }
+
+  .buttonColor:hover {
+    border: 1px solid #FF7900 !important;
+    color: #FF7900 !important;
+    background-color: #ffff !important;
+  }
+
+
+// Style appliquer au tableau
+td {
+    font-family: myfon2;
+  }
+
+  th {
+    font-family: myfon2;
+    color: #ffff !important;
+    font-weight: 600;
+  }
+
+  thead {
+    background-color: #FF7900;
+  }
+
+  .voirPlus {
+    background-color: #FF7900;
+    padding: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 15px;
+    color: #ffff;
+  }
+  hr{
+    background-color: #FF7900 !important;
+    height: 5px;
+    width: 25%;
+
+  }
+
+  @media screen and (max-width: 900px) {
+    .form-select {
+      font-size: medium;
+    }
+
+    .buttonColor {
+      font-size: medium;
+      text-align: center;
+    }
+
+    .hideColonneOder {
+      display: none;
+    }
+
+    th {
+      font-size: medium;
+
+    }
+
+    td {
+      font-size: small;
+    }
+    .largerButton{
+        width: auto;
+    }
+
+  }
+
+  @media screen and (max-width: 450px) {
+    .styleText {
+      text-align: left;
+      margin-right: 20px;
+      font-size: small;
+    }
+    .titreStatus{
+      font-weight: bold;
+      font-size: 16px;
+    }
+    .titreEntite {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    .buttonColor {
+      font-size: small;
+    }
+
+    .hideColonne {
+      display: none;
+    }
+
+    th {
+      font-size: medium;
+    }
+
+    td {
+      font-size: small;
+    }
+
+  }

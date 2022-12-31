@@ -1,0 +1,160 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detail entité</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <div class="row">
+    <div class="col-12">
+      <div class="d-grid m-2 gap-2 d-md-flex justify-content-md-end">
+        <button class="btn buttonColor" type="button" routerLink="/dashboard/nouveau-personnel">+ &nbsp; ajouter personnel</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="row mt-3 mb-3">
+      <!-- <div class="col"></div> -->
+      <div class="col-12  col-lg-4 larger" style="background-color: red;">
+        <p class="text mt-3">Nombre d’activités réalisées</p>
+        <div class="number">{{nombreActivite}}</div>
+      </div>
+      <!-- <div class="col"></div> -->
+      <div class="col-12 col-lg-4 larger " style="background-color: yellow;">
+        <p class="text mt-2">Totals personnels</p>
+        <p class="number">{{nombrePersonnel}}</p>
+      </div>
+      <!-- <div class="col"></div> -->
+      <div class="col-12 col-lg-4  larger" style="background-color: green;">
+        <p class="text mt-3">Nombre d’apprenants formés</p>
+        <div class="number"> {{nombreApprenantFormerParEntite}} </div>
+      </div>
+    </div>
+    <div class="row styledetailleEntite mb-3">
+      <div class="col-12 col-sm-12 col-lg-4 mx-auto my-auto">
+        <img src={{imageEntite}} class="styleAppliquerImageEntite" alt="">
+      </div>
+      <div class="col styleText">
+        <h1 class="titreEntite"> {{nomEntite}} </h1>
+        <p>{{descriptionEntite}}</p>
+        <br>
+
+        <h2 class="titreStatus">{{nomResponsable}} {{prenomResponsable}}</h2>
+        <p>
+          {{ statusResponsable}}
+        </p>
+        <hr size="3">
+
+      </div>
+      <!-- <div class="">
+        <div class="socials">
+          <a (click)="setOpen(true)" title="cliquer ici pour modifier l'entité"><img
+              src="../../assets/icon/modifier-le-fichier.png" alt="" srcset=""></a>
+          
+        </div>
+      </div> -->
+    </div>
+  </div>
+  <!-- tableau contenant les personels de l'entite  -->
+  <div class="personnelEntiteVide mx-auto mb-2 pt-1" *ngIf="nombrePersonnel == 0">
+    Personnel inexistant
+  </div>
+  <table class="table table-striped text-center mx-auto caption-top" *ngIf="nombrePersonnel != 0">
+    <caption class="text-center">Liste des personnels de {{nomEntite}} </caption>
+    <thead>
+
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Prenom</th>
+        <th scope="col" class="hideColonne hideColonneOder">Genre</th>
+        <!-- <th scope="col">Contact</th> -->
+        <th scope="col" class="hideColonne hideColonneOder">Email</th>
+        <!-- <th scope="col" class="hideColonne">Action</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let table of PersonnelEntite | paginate: { itemsPerPage: 8, currentPage: pages}">
+        <td> {{table.nom}} </td>
+        <td> {{table.prenom}} </td>
+        <td class="hideColonne hideColonneOder"> {{table.genre}} </td>
+        <!-- <td> {{table.contact}} </td> -->
+        <td class="hideColonne hideColonneOder"> {{table.email}} </td>
+        <!-- <td class="hideColonne"> <span class="voirPlus">voir plus</span> </td> -->
+      </tr>
+
+    </tbody>
+
+  </table>
+  <div class="position-relative" *ngIf="nombrePersonnel != 0">
+    <div class="position-absolute top-0 end-0 mt-4">
+      <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)=" pages = $event"> </pagination-controls>
+    </div>
+  </div>
+
+
+  <!-- formulaire de modification de l'Entité -->
+<!-- 
+  <ion-modal [isOpen]="isModalOpen" backdropDismiss="false">
+
+    <ng-template>
+
+      </div>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modifier entité</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setClose()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <div class="container">
+        
+        <div class="card">
+
+          <div class="card-body text-start">
+            
+            <form>
+              <div for="libelleEntite" class="">Nom entité *</div>
+              <input type="text" name="libelleentiteMo" [(ngModel)]="libelleentiteMo" class="form-control"
+                id="libelleEntite" [value]="nomEntite">
+              <div for="responsableEntite" class="">Responsable de l'entité *</div>
+              <select class="form-select form-select-sm" name="responsableEntiteMo" [(ngModel)]="responsableEntiteMo">
+                <option selected>--selectionner un responsable</option>
+                <option *ngFor="let user of toutUtilisateur ">{{user.prenom}} {{user.nom}}</option>
+
+              </select>
+              <div for="imageEntite" class="">Image entite *</div>
+              <input type="file" (change)="recuperationImage($event)" class="form-control" id="imageEntite"
+                placeholder="selectionner une image">
+
+              <div for="description" class="">Description de l'entité *</div>
+              <textarea class="form-control" id="description" name="descriptionMo" [(ngModel)]="descriptionMo" rows="3"
+                ></textarea>
+
+              <div class="d-grid gap-2 col-6 text-center mx-auto mt-2">
+                <button type="button" class="btn colorbutton2 btn-sm" id="open-modal1"
+                  (click)="modifierEntite()">Modifier</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+
+    </ng-template>
+  </ion-modal> -->
+
+
+</ion-content>

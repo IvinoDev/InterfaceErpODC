@@ -1,0 +1,129 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: #F2EDED;
+  
+}
+.fond{
+  background-color: white;
+  margin-top: 6%;
+  border-radius: 15px;
+}
+.container >table{
+  margin-top: 2%;
+  background-color: white;
+}
+.searchBar{
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  
+}
+.InputSearch{
+  margin-top: 10px;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  background-color: #F3F3F3;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 30% 65%;
+
+}
+.InputSearch >svg{
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 30%;
+}
+.InputSearch > input{
+  border: 0;
+  font-size: 20px;
+  font-family: cursive;
+  background-color: #F3F3F3;
+}
+.InputSearch >input:focus {
+  border: 0;
+}
+
+table{
+  margin-top: 50px;
+ 
+}
+
+td{
+  font-family: myfon2;
+}
+th{
+  font-family: myfon2;
+  color: #ffff !important;
+    font-weight: 600;
+}
+thead{
+  background-color: #FF7900;
+}
+.voirPlus{
+  background-color: #FF7900;
+  padding: 5px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 15px;
+  color: #ffff;
+}
+@media screen and (max-width: 900px) {
+  .form-select{
+    font-size: medium;
+  }
+  .buttonColor{
+    font-size: medium;
+    text-align: center;
+  }
+  .hideColonneOder{
+    display: none;
+  }
+  th{
+    font-size: medium;
+
+  }
+  td{
+    font-size: small;
+  }
+  .stylePagination{
+    font-size: medium;
+  }
+
+  .InputSearch > input{
+    border: 0;
+    font-size: 15px;
+    font-family: cursive;
+  }
+
+
+}
+@media screen and (max-width: 450px) {
+  .buttonColor{
+    font-size: small;
+  }
+  .hideColonne{
+    display: none;
+  }
+  th{
+    font-size: medium;
+  }
+  td{
+    font-size: small;
+  }
+  .stylePagination{
+    font-size: small;
+  }
+
+  .InputSearch > input{
+    border: 0;
+    font-size: 10px;
+    font-family: cursive;
+  }
+
+
+}

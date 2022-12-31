@@ -1,0 +1,121 @@
+.title {
+    margin-bottom: 50px;
+    text-transform: uppercase;
+}
+.pag{
+
+border-radius: 15px;
+margin-bottom: 20px;
+}
+.card-block {
+    font-size: 1em;
+    position: relative;
+    margin: 22px;
+    padding: 0.2em;
+    border: none;
+    border-top: 1px solid rgba(34, 36, 38, .1);
+    box-shadow: none;
+}
+
+
+.card {
+    overflow: hidden;
+    padding: 5;
+    border: none;
+    margin-top: 20px;
+}
+.card:hover {
+    background-color: #ccc;
+    cursor: pointer;
+}
+.float-left{
+    
+    overflow: hidden;
+    // padding: 5;
+    // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // margin-top: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.statutbtn{
+    // span{
+    //     margin: 1px;
+    // }
+    display: flex;
+}
+// Activité
+.act-nom{
+    font-size:18px ;
+    span{
+        color:#FF7900;
+        font-size: 20px;
+    }
+    
+}
+
+//nom de l'utlisateur
+h6{
+    font-size: larger;
+}
+
+
+
+.container {
+    display: grid;
+    column-gap: 4%;
+    grid-template-columns: 100%;
+}
+
+.img {
+    max-width: 100%;
+    border: 0;
+    margin-top: 22px;
+    margin-left: 15px;
+    border-radius: 50%;
+    width: auto;
+    height: 80%;
+}
+
+
+@media (max-width: 584px) {
+    .container {          
+        height:60%;
+        display: grid;
+        grid-template-columns: 100%;
+        
+    }
+    .img {
+        max-width: auto;
+        border: 0;
+        margin-top: 15px;
+        margin-left: 15px;
+        border-radius: 50%;
+        width: auto;
+    }
+    h6{
+        font-size: 13px;
+    }
+    .act-nom{
+        font-size:13px ;
+        span{
+            color:#FF7900;
+            font-size: 15px;
+        }
+        
+    }
+
+}
+
+@media (max-width: 1200px) {
+    
+    .img {
+        max-width: 100%;
+        border: 0;
+        margin-top: 15px;
+        margin-left: 15px;
+        border-radius: 50%;
+        width: auto;
+    }
+
+}

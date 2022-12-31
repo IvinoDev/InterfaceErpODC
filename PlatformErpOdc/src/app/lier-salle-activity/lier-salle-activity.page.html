@@ -1,0 +1,57 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+      </ion-buttons>
+      <ion-title>Lier salle</ion-title>
+      <ion-button slot="end" fill="clear">
+        <app-cloche></app-cloche>
+
+      </ion-button>
+    </ion-toolbar>
+  </ion-header>
+
+  
+<ion-content>
+    <div class="container">
+       
+        <div class="pag" *ngFor= "let salleactivite of  salleactivites | paginate:{itemsPerPage:6, currentPage:p}; let index =index">
+       
+        <div class="card float-left">
+            <div class="row ">
+                <div class="col-sm-5">
+                    <img class="img" src="../../assets/odc1.png" alt="">
+                </div>
+                <div class="col-sm-7">
+                    <div class="card-block">
+                        <!--           <h4 class="card-title">Small card</h4> -->
+                        <p><b>{{salleactivite.titre}}</b> <br> <span>{{salleactivite.type}}</span></p>
+
+                        <div class="statutbtn">
+                            <div style="margin-top: 7px; color:#FF7900;">{{salleactivite.status}}</div>
+                            <div class="butrad">
+                                <input type="radio" id="" name="" value="" checked>
+                                <label for=""></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        
+    </div>
+
+    
+    </div>
+    <div class="pagination">
+        <pagination-controls (pageChange)="p=$event" nextLabel="Suivants" previousLabel="Précédents"></pagination-controls>
+    </div>
+    <div class="button">
+        <button> Attribuer </button>
+    </div>
+</ion-content>

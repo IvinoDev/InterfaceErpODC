@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Ajouter entité</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <body>
+    <div class="userbox">
+      <div class="card-heading">
+        <h2 class="title">FORMULAIRE D'AJOUT D'ENTITE</h2>
+    </div>
+    <form action="">
+        <div class="inputbox">
+            <input type="text" id="libelle" [(ngModel)]="libelleentite" name="libelleentite" autocomplete="off"  placeholder="Libelle">
+        </div>
+        <div class="inputbox">
+          <input type="text" id="libelle" [(ngModel)] ="description" name="description" placeholder="Description">
+        </div>
+       
+        
+       
+      <div class="button">
+        <div class="button-left"><button>FERMER</button></div>
+        <div class="button-right"><button (click)="AjoutEntite()">ENREGISTRER</button></div>
+      </div>  
+      
+    </form>
+    </div>
+  </body>
+</ion-content>

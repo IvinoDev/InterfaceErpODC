@@ -1,0 +1,136 @@
+@font-face {
+  font-family: myfon;
+  src: url("../../assets/font/Poppins-Black.ttf");
+}
+
+@font-face {
+  font-family: myfon1;
+  src: url("../../assets/font/Poppins-Light.ttf");
+}
+
+ion-split-pane {
+
+  --border: none !important;
+  --side-width: 12em;
+
+
+  ion-menu {
+    --background: var(--ion-color-warning-contrast) !important;
+
+    ion-content {
+      --background: var(--ion-color-warning-contrast) !important;
+
+      ion-item {
+        --background: var(--ion-color-warning-contrast) !important;
+        --color: #FFFFFF !important;
+        letter-spacing: 2px;
+        font-family: myfon1;
+
+
+      }
+// Style appliquer au diferent test de sideBar
+      .imageUtilisateur {
+        width: 120px;
+        // height: 90px;
+        border-radius: 50%;
+      }
+
+      .nomUtilisateur {
+        font-family: myfon1;
+        font-style: normal;
+        font-size: large;
+        font-weight: bolder;
+        color: #FF6200;
+      }
+
+      .statusUtilisateur {
+        font-family: myfon1;
+        font-style: normal;
+        font-weight: bolder;
+        font-size: medium;
+        color: #FFFF;
+      }
+
+      .lienPage {
+        font-family: myfon1;
+        font-weight: 600;
+        font-size: medium;
+        letter-spacing: 2px;
+      }
+
+      .lienPage:hover {
+        color: #FF6200;
+      }
+
+      .ion-icon {
+        width: 25px;
+      }
+
+      .Active {
+        display: none;
+      }
+
+      .active-item {
+        border-bottom: #FF6200 2px solid;
+        border-right: #FF6200 15px solid;
+        border-radius: 0px 0px 10px 0px;
+        color: #FF6200 !important;
+      }
+
+      .active-item .Active {
+        display: inline;
+      }
+
+      .active-item .Desactive {
+        display: none;
+      }
+
+      // style appliquer au button de deconnexion
+      .butonDeconnexion {
+        background: #FF6200 !important;
+        color: #FFFFFF !important;
+        border-color: #FF6200;
+        border-style: solid;
+        border-width: 2px;
+      }
+
+      .butonDeconnexion:hover {
+        background: #ffff !important;
+        color: #FF6200 !important;
+
+        border-color: #FF6200;
+        border-style: solid;
+        border-width: 2px;
+
+      }
+
+    }
+  }
+}
+// style appliquer lorsquer la largeur de l'ecran est inferieur a 600px
+ @media screen and (max-width: 600px) {
+  .imageUtilisateur {
+    width: 80px;
+    height: 75px;
+    border-radius: 50%;
+  }
+
+  .nomUtilisateur {
+    font-size: large;
+  }
+
+  .statusUtilisateur {
+    font-size: medium;
+  }
+
+  .lienPage {
+    font-size: 2px;
+    letter-spacing: 1px;
+  }
+  .ion-icon {
+    width: 20px;
+  }
+ }
+ ion-router-outlet{
+  --ion-background-color: #F2EDED ;
+ }

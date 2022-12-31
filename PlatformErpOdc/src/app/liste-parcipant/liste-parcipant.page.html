@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>ListeParcipant</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+
+  <div class="texte">La liste de tous les participants</div>
+
+  <table class="table table-striped text-center">
+    <thead>
+      <tr>
+        <th scope="col" class="hideColonne hideColonneOder">
+          Activité    <input type="checkbox" name="filtrerparactivite" value="1" id="checkboxOneInput"/>
+        </th>
+        <th scope="col">
+          Date début    <input type="checkbox" name="filtrerpardatedebut" value="1" id="checkboxOneInput"/>
+        </th>
+        <th scope="col" class="hideColonne hideColonneOder">
+          Date fin    <input type="checkbox" name="filtrerpardatefin" value="1" id="checkboxOneInput"/>
+        </th>
+        <th scope="col">Nom</th>
+        <th scope="col" class="hideColonne hideColonneOder">Prénom</th>
+        <th scope="col">Email</th>
+        <th scope="col" class="hideColonne hideColonneOder">Date de naissance</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let activite of activites | paginate: { itemsPerPage: 5, currentPage: pages}">
+        <td scope="col" class="hideColonne hideColonneOder">{{activite.libelle}}</td>
+        <td scope="col">{{activite.datedebut | date : 'dd-MM-YYYY'}}</td>
+        <td scope="col" class="hideColonne hideColonneOder">{{activite.datefin | date : 'dd-MM-YYYY'}}</td>
+        <td scope="col">{{activite.nom}}</td>
+        <td scope="col" class="hideColonne hideColonneOder">{{activite.prenom}}</td>
+        <td scope="col">{{activite.email}}</td>
+        <td scope="col" class="hideColonne hideColonneOder">{{activite.datenaissance | date : 'dd-MM-YYYY'}}</td>
+      </tr>
+      
+    </tbody> 
+    <div class="pagination">
+    <pagination-controls (pageChange)=" pages = $event"> </pagination-controls>
+    </div>
+  </table>
+</div>
+</ion-content>

@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Liaison salle et activite</ion-title>
+    <ion-button slot="end" fill="clear">
+      <!-- <app-cloche></app-cloche> -->
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="content-wrapper">
+
+        <div *ngIf="longueur==0">
+          Aucune activité sans Salle n'existe
+
+    </div>
+      <div class="pag" *ngFor= "let ta of  actwithoutsalle  | paginate:{itemsPerPage:6, currentPage:p}; let index =index; ">
+          <div class="news-card">
+            <!-- <a [routerLink]="['/dashboard/detailactivite',ta.id]" class="news-card__card-link"></a> -->
+            <img src={{ta.image}} alt="" class="news-card__image">
+            <div class="news-card__text-wrapper">
+              <h2 class="news-card__title">{{ta.nom}}</h2>
+              <div class="news-card__post-date" style="font-size: larger; color:black"><b>{{ta.typeActivite.libelle}}</b></div>
+              <div style="color:#FF7900" >{{ta.etat.statut}}</div>
+
+              <div class="descripppp" style="display:flex; justify-content:space-around;">
+
+                <div > <p >{{ta.description | slice:0:20}} ... </p></div>
+                <div >
+
+                  <button [routerLink]="['/dashboard/detailactivite',ta.id]" style="background-color:#FF7900;color:#FFF;border:none; margin-right: 50px;" (click)="attribueractivite(ta.id)">
+                    Attribuer
+                  </button>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+  </div>
+
+  <div class="pagination">
+    <pagination-controls (pageChange)="p=$event" nextLabel="Suivants" previousLabel="Précédents"></pagination-controls>
+</div>
+
+</ion-content>

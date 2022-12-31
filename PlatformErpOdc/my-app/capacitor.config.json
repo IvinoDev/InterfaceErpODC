@@ -1,0 +1,11 @@
+{
+  "appId": "com.odc",
+  "appName": "ERP ODC",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  }
+}

@@ -1,0 +1,262 @@
+@font-face {
+  font-family: myfon2;
+  src: url('../../assets/font/Poppins-Light.ttf');
+}
+
+
+.container {
+   max-width: 1000px;
+  width: 100%;
+  padding: 50px 30px ;
+  border-radius: 15px;
+  background: #fff;
+  margin-top:3%;
+  margin-bottom: 3%;
+  box-shadow: 0px 6px 4px 6px rgba(0, 0, 0, 0.10);
+  
+}
+
+
+
+
+#inputs{
+  box-shadow: none;
+  outline:none;
+}
+label{
+font-family: myfon2;
+}
+
+textarea{
+  box-shadow: none;
+}
+#descriptiontextarea{
+
+  box-shadow: none;
+}
+
+.bouton{
+  background-color: #FF7900;
+  width: 135px;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 2%;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+  margin-left: 70%;
+  color: #fff;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: #FF7900;
+}
+
+
+.bouton:hover{
+  background-color: #fff !important;
+  width: 135px;
+  border: 1px solid #FF7900 !important;
+  font-weight: bold;
+  border-radius: 15px;
+  color:#FF7900 !important;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+  margin-top: 2%;
+  margin-left: 70%;
+  
+  
+}
+
+@media screen and (max-width:768px) {
+.button_div{
+      margin-top: 8%;
+
+  }
+
+}
+@media screen and (max-width: 768px) {
+  .bouton{
+    margin-left: auto;
+    margin-right:auto ;
+  }
+
+}
+
+
+
+
+
+.container{
+  max-width: 1000px;
+  width: 100%;
+  padding: 50px 30px 106px;
+  border-radius: 15px;
+  background: #fff;
+  margin-top: 3%;
+  margin-bottom: 3%;
+  box-shadow: 0px 6px 4px 6px rgb(0 0 0 / 10%);
+}
+
+.list-md{
+  background: none !important;
+}
+
+
+.item-native::after{
+  background: none !important;
+}
+
+
+label{
+    font-family: myfon2;
+    color: #FF7900;
+    }
+    
+
+    .box {
+      width: 100%;
+      padding: 40px 30px 30px 30px;
+      border-radius: 15px;
+      border: #000 2px solid;
+      margin: 20px auto;
+      
+  }
+
+
+  h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 2px;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    padding: 3px 6px;
+    position: absolute;
+    top: 24% !important;
+    background-color: #FFF;
+    color: #000;
+    left: 50%;
+    transform: translate(-50%, -2%)
+}
+  
+
+img{
+
+  margin-top: 15%;
+}
+
+@media screen and (max-width:767px) {
+  img{
+
+    margin-top: 0%;
+  }
+}
+
+
+#MiniLeftNav li{
+  list-style: outside none none;
+    margin: 20px 0;
+    padding: 0;
+    width: 48px;
+}
+
+#MiniLeftNav li a{
+    border:solid 1px #ff7900;
+  display: block;
+    padding: 7px;
+    position: relative;
+}
+
+
+#MiniLeftNav span {
+  font-family: myfon2;
+  font-size:14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  // text-transform: uppercase;
+  bottom: 0;
+  left: 47px;
+  line-height: 38px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 0;
+  
+  /* CSS3 Transition: */
+-webkit-transition: 0.50s;
+/* Future proofing (these do not work yet): */
+-moz-transition: 0.50s;
+transition: 0.50s;  
+}
+#MiniLeftNav a:hover span{ width:auto; padding:0 30px;overflow:visible; }
+#MiniLeftNav a:hover{text-decoration:none;}
+#MiniLeftNav a span{
+background-color:#ff7900;
+color:white;
+}
+
+.btndesi {
+  background-color: #FF7900;
+  width: 135px;
+  font-weight: bold;
+  border-radius: 15px;
+  margin-top: 2%;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+  margin-left: 23%;
+  color: #fff;
+  --bs-btn-active-bg: white;
+  --bs-btn-active-border-color: #FF7900;
+}
+
+.btndesi:hover {
+  background-color: #fff !important;
+  width: 135px;
+  border: 1px solid #FF7900 !important;
+  font-weight: bold;
+  border-radius: 15px;
+  color:#FF7900 !important;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+  margin-top: 2%;
+  margin-left: 23%;
+}
+
+
+
+@media screen and (min-width:560px) {
+  h1 {
+    position: absolute;
+    top: 13%;
+  }
+  }
+
+  @media screen and (max-width:560px) {
+    h1 {
+    font-size: 20px;
+    position: absolute;
+    top: 15%;
+    }
+    }
+  
+
+    @media screen and (max-width:846px) {
+      ol, ul {
+        padding-left: 0rem;
+    }
+    
+    dl, ol, ul {
+      margin-top: -6px;
+      margin-bottom: 1rem;
+    }
+    
+    }
+
+
+
+
+
+
+
+
+
+
+

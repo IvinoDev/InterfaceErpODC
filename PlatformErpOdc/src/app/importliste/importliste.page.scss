@@ -1,0 +1,77 @@
+@font-face {
+  font-family: myfon2;
+  src: url('../../assets/font/Poppins-Light.ttf');
+}
+
+img{
+  height: 80%;
+  width: 100%;
+}
+  @media (max-width: 768px) {
+
+}
+
+
+.container {
+  max-width: 700px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 15px;
+  background: #fff;
+  margin-top:3%;
+  // height: 80%;
+  // margin: auto;
+  box-shadow: 0px 6px 4px 6px rgba(0, 0, 0, 0.10);
+}
+
+#inputs{
+  box-shadow: none;
+  outline:none;
+}
+
+//Style sur le select
+#select{
+  background-color: #F8FAFC;
+  color: black;
+  border: 1px solid #B8BCCA ;
+  padding: 12px 178px 12px 0px;
+  border-radius: 5px;
+ width: 100%;
+}
+label{
+font-family: myfon2;
+color:#FF7900 ;
+}
+
+.bouton{
+  background-color: #FF7900;
+ 
+  border: none;
+  font-weight: bold;
+  margin-bottom: 10%;
+  border-radius: 5px;
+  width: 100%;
+  color: #fff;
+margin-left: auto;
+margin-right: auto;
+  letter-spacing: 0.03em;
+  font-family: myfon2;
+}
+
+#import{
+    box-shadow: none;
+    border-radius: none;
+    background: white;
+  }
+  
+  .importer{
+    border: 2px dashed black;
+    padding: 30px;
+    border-radius: 10px;
+  }
+   #iconeImport{
+    margin-bottom: 10px;
+    font-size:60px ;
+    margin-left: 70px;
+  
+  }

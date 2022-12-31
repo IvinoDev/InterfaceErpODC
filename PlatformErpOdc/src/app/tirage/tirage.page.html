@@ -1,0 +1,61 @@
+ <ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Effectuer tirage</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="container">
+
+    <div class="row" >
+                
+        <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6" >
+
+            <img src="../../assets/images/tirag.gif"   alt="">
+
+         </div>
+
+             <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6">
+
+          <form #f="ngForm">
+                    
+            <div class="input mb-3">
+              <label for="inputs" class="form-label">Nom du tirage *</label>
+              <input [(ngModel)]="libelletirage" name="libelletirage" id="inputs"  name="nomTirage" type="text"  class="form-control" id="inputs" required>
+            </div>
+            <!-- <div class="input mb-3">
+              <label for="select" class="form-label">Activité *</label>
+              <select  [(ngModel)]="idactivite" name="nomactivite" id="select" class="form-select" aria-label="Default select example">
+                  <option selected >Choisisez une activité</option>
+                  <option *ngFor="let type of nom" >{{type.nom}}</option>                                    
+              </select>
+            </div> -->
+            <div class="input mb-3">
+              <label for="select" class="form-label">Liste à tirée *</label>
+              <select  [(ngModel)]="libelleListe" name="libelleListe" id="select" class="form-select" aria-label="Default select example">
+                  <option selected >Choisisez une liste</option>
+                  <option *ngFor="let liste of listes">{{liste.libelle}}</option>
+                                    
+              </select>
+            </div>
+
+            <div class="input mb-3">
+              <label for="inputs" class="form-label">Nombre *</label>
+              <input  [(ngModel)]="nombre" name="nombre" id="inputs"  name="nombrePlace" type="number" min="1"  class="form-control" id="inputs" required>
+            </div>        
+            
+            <button (click)="FaireTirage()" [disabled]="f.form.invalid" [style.backgroundColor]="'#FF7900'"type="button" class="btn btn-outline-dark bouton">Trier</button>
+          </form>
+             </div>
+    </div>
+</div>
+</ion-content>

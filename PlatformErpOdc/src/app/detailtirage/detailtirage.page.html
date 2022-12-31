@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Postulants tirés</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+
+  <div class="container">
+    <div class="fond">
+      <div class="searchBar">
+        <div class="InputSearch">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" #FF7900" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+          <input type="text" name="motCle" id="motCle" placeholder="Recherche liste" > <!-- [(ngModel)]="searchText" -->
+        </div>
+      </div>
+  
+      <table class="table table-striped text-center">
+        <thead>
+          <tr>
+            <th scope="col">Identifiant</th>
+            <th scope="col">Nom</th>
+            <th scope="col" class="hideColonne hideColonneOder">Prenom</th>
+            <th scope="col">Email</th>
+            <th scope="col" class="hideColonne hideColonneOder">Date</th>
+    
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let table of resultTir | paginate: { itemsPerPage: 4, currentPage: page}">
+            <td> {{table.postulant.id}} </td>
+            <td> {{table.postulant.nom}} </td>
+            <td class="hideColonne hideColonneOder" > {{table.postulant.prenom}} </td> 
+            <td> {{table.postulant.email}} </td>
+            <td class="hideColonne hideColonneOder" > {{table.postulant.dateNaissance | date: "dd MMMM yyyy"}} </td>
+          </tr>
+          
+    
+        </tbody>
+    
+      </table>
+      <div class="position-relative">
+        <div class="position-absolute top-0 end-0 mt-4 stylePagination">
+          <pagination-controls previousLabel="Précédent"nextLabel="Suivant" (pageChange)=" page = $event"> </pagination-controls></div>
+      </div>
+    </div>
+   
+
+  </div>
+  
+</ion-content>

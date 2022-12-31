@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Personnel externe</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="row">
+    <div class="col-lg-3 col-12">
+      <div class="d-grid gap-2 m-2 d-md-flex justify-content-md-start">
+        <!-- <select class="form-select form-select-md" aria-label=".form-select-sm example" (change)="filtrebyentity()">
+          <option selected>
+            <ion-icon name="funnel-outline" slot="start"></ion-icon>Filtrer par entité
+          </option>
+          <option *ngFor="let entite of Entites" >{{entite.libelleentite}}</option>
+        </select> -->
+        <!-- <select class="form-select form-select-md" aria-label=".form-select-sm example" (change)="filtrebyentity()">
+          <option selected>
+            <ion-icon name="funnel-outline" slot="start"></ion-icon>Filtrer par type personnel
+          </option>
+          <option value="Personnels externes">Personnels externes</option>
+          <option value="Personnels internes">Personnels internes</option>
+        </select> -->
+      </div>
+    </div>
+    <div class="col-lg-9 col-12">
+      <div class="d-grid m-2 gap-2 d-md-flex justify-content-md-end">
+        <button class="btn buttonColor" type="button" routerLink="/dashboard/ajouter-personnel-externe" >+ &nbsp; Ajouter Personnel Externe</button>
+        <button class="btn buttonColor" type="button" routerLink="/dashboard/nouveau-personnel">+ &nbsp; Ajouter Personnel</button>
+      </div>
+    </div>
+  </div>
+  <div class="container ">
+    <div class="row gy-3 my-3">
+
+      <div *ngIf="longueur ==0" id="flex-container" class="testimonials">
+        <div class="container-fluid mere" style="height: 100%;">
+          <ion-label class="lblAucune"> Aucun personnel externe enregistrer
+          </ion-label>
+        </div>
+      </div>
+
+     
+         <!-- DEBUT PAGINATION -->
+      <div  class=" col-6 col-sm-3 col-md-4 col-lg-3" *ngFor=" let a of intervenant | paginate:{itemsPerPage:8, currentPage:a}; let index = index">
+
+        <div *ngIf="longueur!==0"  class="card" >
+          <!-- <img *ngIf="a.image!=null" src={{a.image}} class="card-img-top" alt="..."> -->
+          <img src="assets/images/profile.png" class="card-img-top" alt="...">
+
+          <div class="card-body">
+            <h5 class="card-title"  [innerHTML]="a.nom | slice:0:10"></h5><label>...</label>
+            <p class="card-text" [innerHTML]="a.prenom | slice:0:10"></p><label>...</label>
+          </div>
+
+        </div>
+
+      </div>
+     
+    </div>
+
+  </div>
+   
+  <div class="pagination">
+    <pagination-controls (pageChange)="a = $event" nextLabel="Suivants" previousLabel="Précédents" [responsive]="responsive">
+      
+    </pagination-controls>
+  </div>
+</ion-content>

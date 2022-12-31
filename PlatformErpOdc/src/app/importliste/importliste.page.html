@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Importer liste participant</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+  integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+<ion-content>
+
+
+
+
+<div class="container">
+  
+  <div class="row">
+    <!-- <div class="box"> 
+      <h1>Importer liste</h1>-->
+    
+      <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6">
+      <img src="../../assets/images/importe.gif" alt="">
+    </div>
+
+    
+    <div class="col- col-sm- col-md-6 col-lg-6 col-xl-6">
+
+
+      <form #f="ngForm">
+              
+        <div class="col" class="importer">
+          <i class="fa-solid fa-file-circle-plus" id="iconeImport" style="margin-left: 40%;color: rgb(232, 224, 224)
+          ;"></i>
+          <input
+            placeholder="Cliquer ici pour importer"
+            type="file"
+            name="files"
+            id="import" required
+            class="form-control"
+            (change)="televerser($event)"
+          />
+        </div><br>
+
+        <div class="input mb-3">
+          <label for="inputs" class="form-label">Nom fichier *</label>
+          <input id="inputs"  name="nom" type="text"  class="form-control" id="inputs" required [(ngModel)]="name" [ngModelOptions]="{standalone: true}" >
+        </div>
+
+        <div class="input mb-3">
+          <label for="inputs" class="form-label">Activité *</label>
+          <select name="idactivite" id="select" class="col" [(ngModel)]="idactivite" [ngModelOptions]="{standalone : true}">
+            <option value="">Choisissez une activité</option>
+            <option *ngFor="let lact of listeactivite" >{{lact.nom}}</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn btn-outline-dark bouton" (click)="importerList()" [disabled]="f.form.invalid">Importer</button>
+
+
+      </form>
+    </div>
+  </div>
+</div>

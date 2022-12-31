@@ -1,0 +1,213 @@
+@font-face {
+    font-family: myfon2;
+    src: url('../../assets/font/Poppins-Light.ttf');
+}
+
+
+
+
+.container {
+    max-width: 700px;
+    width: 100%;
+    padding: 50px 30px ;
+    border-radius: 15px;
+    background: #fff;
+    margin-top:3%;
+    margin-bottom: 3%;
+    // height: auto;
+    // margin: auto;
+    box-shadow: 0px 6px 4px 6px rgba(0, 0, 0, 0.10);
+    
+}
+
+.form-floating>.form-control, .form-floating>.form-control-plaintext {
+    height: 88%;
+}
+
+#inputs{
+    box-shadow: none;
+    outline:none;
+}
+label{
+font-family: myfon2;
+}
+
+textarea{
+    box-shadow: none;
+}
+#descriptiontextarea{
+
+    box-shadow: none;
+}
+// #inputs:focus{
+
+//     outline: 1px solid rgb(80, 78, 78);
+
+// }
+.bouton{
+    background-color: #FF7900;
+    width: 135px;
+  
+    font-weight: bold;
+    // margin-bottom: 10%;
+    border-radius: 15px;
+    margin-top: 2%;
+    letter-spacing: 0.03em;
+    font-family: myfon2;
+    margin-left: 40%;
+    color: #fff;
+    --bs-btn-active-bg: white;
+    --bs-btn-active-border-color: #FF7900;
+}
+
+
+.bouton:hover{
+    background-color: #fff !important;
+    width: 135px;
+    border: 1px solid #FF7900 !important;
+    font-weight: bold;
+    // margin-bottom: 10%;
+    border-radius: 15px;
+    color:#FF7900 !important;
+    letter-spacing: 0.03em;
+    font-family: myfon2;
+    margin-top: 2%;
+    margin-left: 40%;
+    
+    
+}
+
+
+
+@media screen and (max-width:768px) {
+.button_div{
+        margin-top: 8%;
+    }
+
+    .container{
+        height: 100%;
+    }
+}
+// button:focus
+// {
+// background-color:#fff ;
+// border: 1px solid  #FF7900 ;
+// color: #FF7900;
+// }
+// /*le cadre principal*/
+
+// .principal {
+//     position: relative;
+//     width: 350px;
+//     height: 489px;
+//     margin-top: 10px;
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding: 40px;
+//     padding-top: 50px;
+//     box-sizing: border-box;
+//     background: white;
+//     box-shadow: 0px 6px 4px 6px rgba(0, 0, 0, 0.25);
+//     border-radius: 15px;
+// }
+// /*button*/
+// button{
+//     color: white;
+//     margin-top: auto;
+//     background: #FF7900;
+//     height: 40px;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     font-weight: 900;
+//     box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+//     transition: 0.5s;
+//      border: 2px solid #FF7900;
+//      padding: 0px 100px 0px 0px;
+//      margin-left: 50px;
+//     width: 60%;
+//     padding: 0;
+//     border-radius: 20px;
+  
+//   }
+
+// /*titre*/
+
+// .title {
+//     margin-top: 0px;
+//     font-weight: 900;
+//     font-size: 1.2rem;
+//     color: black;
+//     letter-spacing: 1px;
+//     text-align: center;
+// }
+
+
+// /* label*/
+
+// label {
+//     color: orangered;
+// }
+
+
+// /*input*/
+
+// #inputs {
+//     background-color: #F8FAFC;
+//     color: black;
+//     border: 1px solid #B8BCCA;
+//     padding: 8px 80px 8px 0px;
+//     border-radius: 15px;
+// }
+
+
+// /*button*/
+
+// button {
+//     color: white;
+//     margin-top: auto;
+//     background: #FF7900;
+//     height: 40px;
+//     border-radius: 5px;
+//     cursor: pointer;
+//     font-weight: 900;
+//     box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+//     transition: 0.5s;
+//     border: 2px solid #FF7900;
+//     padding: 0px 100px 0px 0px;
+//     margin-left: 50px;
+//     width: 60%;
+//     padding: 0;
+//     border-radius: 20px;
+// }
+
+// button:hover {
+//     background-color: white;
+//     color: black;
+//     border: 1px solid #FF7900;
+// }
+
+// @media (max-width: 584px) {
+//     .container {
+//         max-width: 100%;
+//     }
+//     form .row .col {
+//         margin-bottom: 15px;
+//         width: 100%;
+//     }
+//     ion-title #notif {
+//         width: 100%;
+//     }
+//     .container form .row col {
+//         max-height: 300px;
+//         overflow-y: scroll;
+//     }
+//     .row .col::-webkit-scrollbar {
+//         width: 0;
+//     }
+// }
+
+
+
+label {
+    color: #FF7900
+}

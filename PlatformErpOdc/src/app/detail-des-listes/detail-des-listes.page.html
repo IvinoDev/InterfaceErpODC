@@ -1,0 +1,106 @@
+<ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Liste Importer</ion-title>
+      <ion-button slot="end" fill="clear">
+        <app-cloche></app-cloche>
+
+        </ion-button>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="row">
+        <div class="col-lg-3 col-12 col-sm-6">
+            <div class="d-grid gap-2 m-2 d-md-flex justify-content-md-start">
+                <button class="btn buttonColor" type="button" routerLink="/dashboard/tirage">Effectuer Tirage</button>
+            </div>
+        </div>
+        <div class="col-lg-9 col-12 col-sm-6">
+            <div class="d-grid m-2 gap-2 d-md-flex justify-content-md-end">
+                <button class="btn buttonColor" type="button" routerLink="/dashboard/importeliste">Importer
+                    Liste</button>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="left">
+
+            <div class="menuResponsive">
+                <label for="" class="nbrTirages">{{totaltirage}} Tirages</label>
+                <label for="" class="nbrListes">{{nbrliste}} Listes</label>
+                <label for="" class="nbrTiragesValide">{{nbreTirageValides}} Tirages Validés</label>
+            </div>
+
+            <div class="searchBar">
+                <div class="InputSearch">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill=" #FF7900" class="bi bi-search"
+                        viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                    <input type="text" name="motCle" id="motCle" placeholder="Recherche liste">
+
+                </div>
+            </div>
+
+            <div class="menuResponsive">
+                <label for="" class="nbrTirages">{{totaltirage}} Tirages</label>
+                <label for="" class="nbrListes">{{nbrliste}} Listes</label>
+                <label for="" class="nbrTiragesValide">{{nbreTirageValides}} Tirages Validés</label>
+            </div>
+
+            <div class="listeList">
+
+                <!-- condition dans le cas où aucune liste n'est importée -->
+                <div *ngIf="totallistLength==0" class="auccunT">Accune liste importée</div>
+
+                <div id="list" (click)="goDetailTirage(l.id)" class="col" *ngFor="let l of totallist | paginate: { itemsPerPage: 10, currentPage: p} " >
+                    <div class="row">
+                        <img src="../../assets/listetof1.png" alt="" style="width: 100px ;">
+                    </div>
+                    <div class="row">
+                        <label id="libelleListe"   >{{l.libelle}}</label>
+                        <label id="nbrTirageListe" *ngIf="l.tirages.length==1">{{l.tirages.length}} tirage</label>
+                        <label id="nbrTirageListe" *ngIf="l.tirages.length==0">{{l.tirages.length}} tirage</label>
+                        <label id="nbrTirageListe"  *ngIf="l.tirages.length>1" >{{l.tirages.length}} tirages</label>
+                    </div>
+
+                </div>
+                
+
+                
+            </div>
+            <pagination-controls (pageChange)="p = $event"></pagination-controls>
+
+        </div>
+
+        <div class="right">
+            <div class="nbrTirage">
+                <div class="labelContainer">
+                    <label *ngIf="totaltirage>1">{{totaltirage}} Tirages</label>
+                    <label *ngIf="totaltirage==0">{{totaltirage}} Tirage</label>
+                    <label *ngIf="totaltirage==1">{{totaltirage}} Tirage</label>                  
+                </div>
+            </div>
+
+            <diV class="nbrliste">
+                <div class="labelContainer">
+                    <label *ngIf="nbrliste>1">{{nbrliste}} Listes</label>
+                    <label *ngIf="nbrliste==0">{{nbrliste}} Liste</label>
+                    <label *ngIf="nbrliste==1">{{nbrliste}} Liste</label> 
+                </div>
+            </diV>
+
+            <div class="nbrTirageValide">
+                <div class="labelContainer">
+                    <label *ngIf="nbreTirageValides>1">{{nbreTirageValides}} Tirages validés</label>
+                    <label *ngIf="nbreTirageValides==0">Aucun tirage validé</label>
+                    <label *ngIf="nbreTirageValides==1">{{nbreTirageValides}} Tirage validé</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</ion-content>

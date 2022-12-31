@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Accueil</ion-title>
+    <!-- <ion-buttons slot="end">
+      <img [src]="imag" />
+    </ion-buttons> -->
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-button id="open-modal" expand="block">Open Card Modal</ion-button>
+
+  <ion-modal #modal trigger="open-modal">
+    <ng-template>
+      <div class="d-grid gap-2 m-2 d-md-flex justify-content-md-end">
+        <ion-buttons slot="end">
+          <ion-button (click)="modal.dismiss()">Close</ion-button>
+        </ion-buttons>
+      </div>
+      <ion-content>
+
+        <div class="text-center">
+          <div class="text">
+            Liste Importée avec succès !
+          </div>
+          <div class="text">
+            Choissisez une action:
+          </div>
+        </div>
+        <div class="row mx-5 m-2">
+          <div class="col">
+            <button type="button" class="btn colorbutton1 btn-sm">Small button</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn colorbutton2 btn-sm">Small button</button>
+          </div>
+          <div class="col">
+            <button type="button" class="btn colorbutton3 btn-sm">Small button</button>
+          </div>
+        </div>
+</ion-content>

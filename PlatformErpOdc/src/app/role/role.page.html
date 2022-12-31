@@ -1,0 +1,288 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Rôle</ion-title>
+    <ion-button slot="end" fill="clear">
+      <app-cloche></app-cloche>
+
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <!-- <div class="col-sm-7 mx-auto">
+    <header class="section-header text-center">
+      <span class="h1 d-block">
+        <span>❝</span>
+      </span>
+      <h2>Les Roles</h2>
+    </header>
+  </div> -->
+
+  <div class="row">
+    <div class="col-12">
+      <div class="d-grid m-2 gap-2 d-md-flex justify-content-md-end">
+        <button class="btn buttonColor" type="button" id="open-modal">+ &nbsp; Nouveau
+          Role</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div id="flex-container" class="testimonials">
+    <div id="left-zone">
+      <ul class="list">
+        <li class="item" *ngFor="let inf of TousLesRole; let i = index">
+          <input type="radio" id="{{i}}" name="basic_carousel" checked />
+          <label class="label_testimonial" class="{{i}}" for="{{i}}">{{inf.libellerole}} </label>
+          <div class="content-test content_testimonial">
+
+            <!-- <h1>{{inf.entite}}</h1>
+            <p>{{inf.descrription}}</p>
+            <p class="testimonialFrom">{{inf.status}}</p>
+            <p class="testimonialState"> {{inf.nom}} </p>
+            <br> 
+            <p class="testimonialState"><button class="button">Voir+</button></p>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div id="right-zone"></div>
+  </div> -->
+
+  <div class="row mx-2">
+    <div class="col-lg-3 col-12 p-3 showImage">
+      <img src="../../assets/icon/icon/loi (1).png" class="styleAppliquerAuRole" alt="" srcset="">
+    </div>
+    <div class="col">
+      <table class="table table-striped text-center mx-auto caption-top">
+        <caption class="text-center"> Les rôles de ODC </caption>
+        <thead>
+          <tr>
+            <th scope="col"> Titre </th>
+            <th scope="col"> Nombre de droits </th>
+            <th scope="col"> Action </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let inf of TousLesRole; let i = index">
+            <td class="styleLibelleRolle"> {{inf.libellerole}} </td>
+            <td class="styleLibelleRolle">{{inf.droits.length}}</td>
+            <td>
+              <div class="socials">
+                <a title="Voir plus de detail sur l'entité"><img src="../../assets/icon/voir.png" alt="" srcset=""></a>
+                <a title="cliquer ici pour modifier l'entité" (click)="setOpen(true,inf.id, inf.libellerole)"><img
+                    src="../../assets/icon/modifier-le-fichier.png" alt="" srcset=""></a>
+                <a title="cliquer ici pour supprimer l'entité" (click)="supprimerRole(inf.id)"><img
+                    src="../../assets/icon/supprimer.png" alt="" srcset=""></a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+  <ion-modal #modal trigger="open-modal" backdropDismiss="false">
+
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Création et attribution des droits au rôle</ion-title>
+          <ion-buttons slot="end">
+            <button type="button" class="btn-close" (click)="modal.dismiss()" data-bs-dismiss="modal"
+              aria-label="Close"> </button>
+
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+      <div class="container">
+
+        <div class="card">
+          <div class="card-body text-start">
+            <form>
+
+              <div class="row mb-3">
+                <div class="col-12 col-lg-6">
+                  <div for="exampleFormControlInput1" class="libellerole">Libelle role *</div>
+                  <input type="text" class="form-control" [(ngModel)]="libelleRole" name="libelleRole"
+                    id="exampleFormControlInput1" placeholder="Orange digital kalanso">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droit de Lecture"
+                        (ionChange)="handleChange($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let food of LibelleRoleLecture" [value]="food">
+                          {{ food.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droit de creation"
+                        (ionChange)="handleChange($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let creat of LibelleRoleCreation" [value]="creat">
+                          {{ creat.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droits de mise à jours"
+                        (ionChange)="handleChange($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let upd of LibelleRoleUpdate" [value]="upd">
+                          {{ upd.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droits Suppression"
+                        (ionChange)="handleChange11($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let sup of LibelleRoleSuppression" [value]="sup">
+                          {{ sup.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 col-6 text-center mx-auto mt-2">
+                <button type="button" class="btn colorbutton2 btn-sm"
+                  (click)="postRole();modal.dismiss()">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+  </ion-modal>
+
+
+
+  <!-- methode permettant de mettre en jour le role -->
+
+  <ion-modal [isOpen]="isModalOpen" backdropDismiss="false">
+
+    <ng-template>
+
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Mise à jour et attribution des droits au rôle</ion-title>
+          <ion-buttons slot="end">
+            <button type="button" class="btn-close" (click)="setClose(false);" data-bs-dismiss="modal"
+              aria-label="Close"> </button>
+
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+
+
+      <div class="container">
+
+        <div class="card">
+          <div class="card-body text-start">
+            <form>
+
+              <div class="row mb-3">
+                <div class="col-12 col-lg-6">
+                  <div for="exampleFormControlInput1" class="libellerole">Libelle role *</div>
+                  <input type="text" class="form-control" [value]="this.libellerole" [(ngModel)]="libelleRole2"
+                    name="libelleRole2" id="exampleFormControlInput1" placeholder="Orange digital kalanso">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droit de Lecture"
+                        (ionChange)="handleChange1($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let food of LibelleRoleLecture" [value]="food">
+                          {{ food.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droit de creation"
+                        (ionChange)="handleChange1($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let creat of LibelleRoleCreation" [value]="creat">
+                          {{ creat.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droits de mise à jours"
+                        (ionChange)="handleChange1($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let upd of LibelleRoleUpdate" [value]="upd">
+                          {{ upd.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+                <div class="col">
+                  <ion-list>
+                    <ion-item>
+                      <ion-select [compareWith]="compareWith" placeholder="Droits Suppression"
+                        (ionChange)="handleChange1($event)" [multiple]="true">
+                        <ion-select-option *ngFor="let sup of LibelleRoleSuppression" [value]="sup">
+                          {{ sup.libelle }}
+                        </ion-select-option>
+                      </ion-select>
+                    </ion-item>
+
+                  </ion-list>
+                </div>
+              </div>
+
+              <div class="d-grid gap-2 col-6 text-center mx-auto mt-2">
+                <button type="button" class="btn colorbutton2 btn-sm" (click)="updateRole()">Enregistrer</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

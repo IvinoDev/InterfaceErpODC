@@ -1,0 +1,180 @@
+ion-content{
+    position: absolute;
+  }
+  .imgsmall{
+    display: none;
+  }
+  $ruler: 16px;
+
+  .lienPass{
+    color: rgb(53, 32, 175);
+    display: flex;
+    font-size: 15px;
+    font-family: system-ui;
+    text-decoration: underline;
+    justify-content: center;
+    margin-top: 2%;
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .header{
+      display: flex;
+      
+      // justify-content: center;
+      margin: auto;
+     
+    }
+
+    .header p{
+      padding-top: 50px;
+      font-size: 3rem;
+      text-align: center;
+      font-weight: 900px;
+      border-bottom: 4px solid orangered !important;
+      color: #FFF;
+      margin-left: auto !important;
+      margin-right: auto !important;
+      
+    }
+
+    .imgsmall{
+      display: flex !important;
+      margin-bottom: 5%;
+      justify-content: center;
+    }
+    .header img{
+      display: flex;
+      margin: auto !important;
+      width: 100px !important;
+    }
+    .image{
+     display:none
+    }
+    .monform{
+      justify-content: center;
+    //   height: 100vh !important;
+      width: 100% !important;
+      margin: 0 !important;
+      height: 100%;
+
+      border-top-right-radius: 0px !important;
+      border-top-left-radius: 0px !important;
+      border-radius: 35px;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+    }
+  
+    form{
+      width: 100% !important;
+      padding: 5% 15% !important;
+      
+    }
+  
+    input{
+      height: 40px !important;
+    }
+  
+    #btnn{
+      height: 40px !important;
+      font-size: 1rem !important;
+      font-weight: bold;
+      color: #FFF;
+  
+    }
+    .monform > p >b{
+      font-size: 25px !important;
+    }
+   
+  }
+    
+  form {
+    
+    padding: 16px;
+      padding: 15% 10%;
+      margin: 0 auto;
+  }
+  
+  input{
+    height: 56px;
+  }
+  
+  
+  .header{
+    display: flex;
+    // width: 100%;
+    justify-content: space-around;
+    // background-attachment: fixed;
+    // background-position: center;
+    //  background-size: cover;
+    //  height: 80vh;
+    height: 100%;
+    position: relative;
+    background-size: cover;
+    padding: top 0;
+  
+   }
+  //  .test{
+  //   width: -50%;
+  // }
+  // .image{
+  //   width: -40%;
+  // }
+  
+  .header p{
+    padding-top: 20%;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: 900px;
+    border-bottom: 4px solid orangered;
+    color: #FFF;
+    margin-left: 5% ;
+    margin-right: 5% ;
+    
+  }
+  #btnn{
+        color: rgb(255, 255, 255);
+        background-color: orangered;
+        margin: auto;
+        width: 100%;
+        margin-top: 5px;
+        height: 46px;
+        font-weight: bold;
+        font-size: 1.5rem;
+  }
+  .header img{
+    position: absolute;
+    margin-top: 10%;
+    width: 500px;
+    margin-left: -171px;
+  }
+  
+  .monform{
+     background-image:linear-gradient(rgb(0 0 0 / 60%), rgb(0 0 0 / 60%)),
+      url("../../assets/images/animation.gif");
+    background-repeat:no-repeat;
+    padding-bottom: 0;
+    //height: 100%;
+    margin-right: -100px;
+    width: 60vh;
+    margin-top: 60px;
+    background-size: cover;
+    border-radius: 35px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    
+  }
+
+  #erreur{
+
+    color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    background-color: #972d2d8f;
+    border-radius: 5px;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+  
+  

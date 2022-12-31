@@ -1,0 +1,47 @@
+@font-face {
+  font-family: myfon2;
+  src: url('../../assets/font/Poppins-Light.ttf');
+}
+
+* {
+  font-family: myfon2;
+}
+
+.entete{
+  background-color: #FF7900;
+  color: white;
+}
+.tache{
+  border: 1px solid #FF7900;
+  background-color: #FF7900;
+  border-radius: 15px;
+  color: white;
+  height: 38px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 80%;
+  width: 18%;
+  font-weight: 600;
+}
+
+.tache:hover {
+  color: white;
+  background-color: black;
+  border: 2px solid black;
+  // font-family: 'myfon';
+}
+
+.pagination ::ng-deep .ngx-pagination .current {
+background-color: #FF7900;
+}
+
+
+.bi-pencil-square::before {
+  content: "\f4ca";
+  margin-right: 20%;
+}
+
+.bi-trash3::before {
+  content: "\f78b";
+  cursor: pointer;
+} 
